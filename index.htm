@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/js" src="js/app.js" defer></script>
+    <title>
+      Email Signature App - International Missionary Society of the Seventh-Day
+      Adventists Reform Movement Church
+    </title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="img/LOGO.png" alt="IMS SDA RM Church Logo" class="logo" />
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="#" target="_blank">Home</a></li>
+          <li><a href="#" target="_blank">About</a></li>
+          <li><a href="#" target="_blank">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Email Signature Creator</h1>
+      <small
+        >Create your email signature to use with your church email
+        address.</small
+      >
+
+      <section class="email-app-container">
+        <small>Choose your email client.</small>
+       <div class="clients-container">
+        <div class="email-client">
+            <div class="icon-container">
+          <img
+            src="img/icons8-microsoft-outlook-2019.svg"
+            alt="Microsoft Outlook Logo"
+            class="client-icon"
+          />
+        </div>
+          <h5>Outlook</h5>
+        </div>
+        <div class="email-client">
+            <div class="icon-container">
+          <img
+            src="img/icons8-office-365.svg"
+            alt="Microsoft Office Logo"
+            class="client-icon"
+          />
+          </div>
+          <h5>Office 365</h5>
+        </div>
+        <div class="email-client">
+            <div class="icon-container">
+          <img
+            src="img/icons8-mail.svg"
+            alt="Apple Mail Logo"
+            class="client-icon"
+          />
+        </div>
+          <h5>Apple Mail</h5>
+        </div>
+        <div class="email-client">
+            <div class="icon-container">
+          <img
+            src="img/icons8-gmail.svg"
+            alt="Gmail Logo"
+            class="client-icon"
+          />
+        </div>
+          <h5>Gmail</h5>
+        </div>
+        <div class="email-client">
+            <div class="icon-container">
+          <img
+            src="img/icons8-microsoft-exchange-2019.svg"
+            alt="Microsoft Exchange Server Logo"
+            class="client-icon"
+          />
+        </div>
+          <h5>Exchange Server</h5>
+        </div>
+        <div class="email-client">
+            <div class="icon-container">
+          <img
+            src="img/thunderbird_84124.png"
+            alt="Thunderbird Logo"
+            class="client-icon"
+          />
+        </div>
+          <h5>Thunderbird</h5>
+        </div>
+       </div>
+      </section>
+
+      <section class="form-and-signature">
+        <form action="">
+          <div class="ico-label-input">
+            <label for="name"
+              ><div class="icon-container"><img src="img/checked-Icon.svg" alt="checked icon" /></div><span>First
+                Name</span></label
+            >
+            <div class="input-container">
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="John"
+                  value=""
+                  name="first name"
+                  required
+                />
+            </div>
+          </div>
+          <div class="ico-label-input">
+            <label for="surname"
+              ><div class="icon-container"><img src="img/checked-Icon.svg" alt="checked icon" /></div><span>Last
+                Name</span></label
+            >
+            <div class="input-container">
+              <input
+                id="surname"
+                type="text"
+                placeholder="Doe"
+                value=""
+                name="last name"
+                required
+              />
+            </div>
+          </div>
+          <div class="ico-label-input">
+            <label for="department"
+              ><div class="icon-container"><img src="img/checked-Icon.svg" alt="checked icon" /></div><span>Department</span></label
+            >
+            <div class="input-container">
+              <input
+                id="department"
+                type="text"
+                placeholder="Missionary"
+                value=""
+                name="department"
+                required
+              />
+            </div>
+          </div>
+          <div class="ico-label-input">
+            <label for="position"
+              ><div class="icon-container"><img src="img/checked-Icon.svg" alt="checked icon" /></div><span>Position</span></label
+            >
+            <div class="input-container">
+              <input
+                id="position"
+                type="text"
+                placeholder="Leader"
+                value=""
+                name="position"
+                required
+              />
+            </div>
+          </div>
+          <div class="ico-label-input">
+            <label for="cellphone"
+              ><div class="icon-container"><img src="img/checked-Icon.svg" alt="checked icon" /></div><span>Cellphone</span></label
+            >
+            <div class="input-container">
+              <input
+                id="cellphone"
+                type="text"
+                placeholder="0825556677"
+                value=""
+                name="cellphone"
+                required
+              />
+            </div>
+          </div>
+        </form>
+
+        <div class="browser-window">
+          <div class="inner-container">
+            <p class="email-draft">
+              Good Day, Brethren.<br /><br />Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Architecto dolore voluptas laborum
+              culpa, sapiente vel beatae ipsa modi perferendis dolorum!
+              <br /><br />Kind Regards,<br /><br />
+            </p>
+            <!-- ngInclude: -->
+            <ng-include
+              id="signaturePreview"
+              src="selectedTemplatePath"
+              class="ng-scope"
+            ><!--UNCOMMENT <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+            <HTML><HEAD><TITLE>Email Signature</TITLE>
+            <META content="text/html; charset=utf-8" http-equiv="Content-Type">
+            </HEAD>
+            <BODY style="font-size: 10pt; font-family: {{fontFamily}};">
+            UNCOMMENT-->
+            <table
+              style="width: 430px; font-size: 11pt; font-family: Arial, sans-serif"
+              class="ng-scope"
+              cellspacing="0"
+              cellpadding="0"
+              border="0"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    colspan="2"
+                    style="border-bottom: 1px dotted #000; padding-bottom: 10px"
+                  >
+                    <br /><br />
+                    Kind Regards,<br /><br />
+                    <strong
+                      ><span
+                        style="
+                          font-size: 18pt;
+                          font-family: Arial, sans-serif;
+                          color: #702b1f;
+                        "
+                        id="sName"
+                        class="ng-binding"
+                        >Your Name</span
+                      ></strong
+                    >
+                    <!-- ngIf: isAnyFieldEntered('title,website') --><span
+                      ng-if="isAnyFieldEntered('title,website')"
+                      class="ng-scope"
+                      ><br /></span
+                    ><!-- end ngIf: isAnyFieldEntered('title,website') -->
+                    <!-- ngIf: showField('title') --><strong
+                      ng-if="showField('title')"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-size: 10pt;
+                        color: #3b0b11;
+                      "
+                      class="ng-binding ng-scope"
+                      id="sDept"
+                      >Multimedia Dept. Assistant</strong
+                    ><!-- end ngIf: showField('title') -->
+                    <strong
+                      ><!-- ngIf: showField('website') --><span
+                        ng-if="showField('website')"
+                        class="ng-scope"
+                        ><!-- ngIf: isAnyFieldEntered('title') --><span
+                          ng-if="isAnyFieldEntered('title')"
+                          class="ng-scope"
+                        >
+                          | </span
+                        ><!-- end ngIf: isAnyFieldEntered('title') --><a
+                          href="http://www.imssdarm-sau.org.za"
+                          target="_blank"
+                          rel="noopener"
+                          style="text-decoration: none"
+                          ><span
+                            style="
+                              font-size: 10pt;
+                              font-family: Arial, sans-serif;
+                              color: #000000;
+                            "
+                            class="ng-binding"
+                            id="sWebsite"
+                          >
+                            www.imssdarm-sau.org.za</span
+                          ></a
+                        ></span
+                      ><!-- end ngIf: showField('website') --></strong
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    colspan="2"
+                    style="font-size: 1px; height: 15px; line-height: 1px"
+                  >
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <!-- ngIf: showField('logo') -->
+                  <td
+                    ng-if="showField('logo')"
+                    style="text-align:center' font-size: 10pt; font-family: Arial, sans-serif; width: 108px; vertical-align: top;"
+                    class="ng-scope logo-show"
+                    width="108"
+                    valign="top"
+                    align="center"
+                  >
+                    <div class="logo-shine shine-animation"></div>
+                    <!-- ngIf: showField('logoURL') --><a
+                      ng-if="showField('logoURL')"
+                      href="https://imssdarm-sau.org.za"
+                      target="_blank"
+                      class="ng-scope"
+                    >
+                      <img
+                        alt="IMS Logo"
+                        id="imsLOGO"
+                        style="width: 88px; height: auto; border: 0"
+                        ng-src="https://imssdarm-sau.org.za/storage/app/media/LOGO-mini.png"
+                        src="https://imssdarm-sau.org.za/storage/app/media/LOGO-mini.png"
+                        width="88"
+                        border="0" /></a
+                    ><!-- end ngIf: showField('logoURL') -->
+                    <!-- ngIf: !showField('logoURL') -->
+                  </td>
+                  <!-- end ngIf: showField('logo') -->
+                  <!-- ngIf: !showField('logo') -->
+                  <td style="padding-left: 15px" valign="top">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td
+                            style="
+                              font-size: 9pt;
+                              font-family: Arial, sans-serif;
+                              vertical-align: top;
+                              line-height: 15px;
+                            "
+                            valign="top"
+                          >
+                            <!-- ngIf: showField('phone') --><span
+                              ng-if="showField('phone')"
+                              class="ng-scope"
+                              ><span
+                                style="
+                                  color: #3b0b11;
+                                  font-family: Arial, sans-serif;
+                                  font-size: 12px;
+                                "
+                                class="ng-binding"
+                                > <!-- <strong>Telephone:</strong> (800) 555-0199<br />--></span></span
+                            ><!-- end ngIf: showField('phone') -->
+                            <!-- ngIf: showField('mobile') --><span
+                              ng-if="showField('mobile')"
+                              class="ng-scope"
+                              ><span
+                                style="
+                                  color: #3b0b11;
+                                  font-family: Arial, sans-serif;
+                                  font-size: 12px;
+                                "
+                                class="ng-binding"
+                                id="sMobile"
+                                ><strong>Mobile:</strong>
+                                +2730924050<br /></span></span
+                            ><!-- end ngIf: showField('mobile') -->
+                            <!-- ngIf: showField('email') --><span
+                              ng-if="showField('email')"
+                              class="ng-scope"
+                              ><span
+                                style="
+                                  color: #3b0b11;
+                                  font-family: Arial, sans-serif;
+                                  font-size: 12px;
+                                "
+                                class="ng-binding"
+                                ><strong>Email:</strong>
+                                hello@imssdarm-sau.org.za<br /></span></span
+                            ><!-- end ngIf: showField('email') -->
+                            <!-- ngIf: isAnyFieldEntered('company,address1,address2') --><span
+                              ng-if="isAnyFieldEntered('company,address1,address2')"
+                              class="ng-scope"
+                            >
+                              <span
+                                style="
+                                  color: #3b0b11;
+                                  font-family: Arial, sans-serif;
+                                  font-size: 12px;
+                                "
+                                ><strong>Address: </strong></span
+                              >
+                              <!-- ngIf: isAnyFieldEntered('address1,address2,company') --><span
+                                ng-if="isAnyFieldEntered('address1,address2,company')"
+                                class="ng-scope"
+                              >
+                                <!-- ngIf: showField('company') --><span
+                                  ng-if="showField('company')"
+                                  style="
+                                    color: #3b0b11;
+                                    font-family: Arial, sans-serif;
+                                    font-size: 12px;
+                                  "
+                                  class="ng-binding ng-scope"
+                                  >International Missionary Society of the Seventh
+                                  Day Adventist-Church Reform Movement SAU</span
+                                ><!-- end ngIf: showField('company') --><!-- ngIf: showField('address1') --><span
+                                  ng-if="showField('address1')"
+                                  style="
+                                    font-size: 12px;
+                                    font-family: Arial, sans-serif;
+                                    color: #3b0b11;
+                                  "
+                                  class="ng-binding ng-scope"
+                                  ><!-- ngIf: showField('company') --><span
+                                    ng-if="showField('company')"
+                                    class="ng-scope"
+                                    >, </span
+                                  ><!-- end ngIf: showField('company') -->98 Bertha
+                                  St., Turfontein<!-- ngIf: showField('address2') --><span
+                                    ng-if="showField('address2')"
+                                    class="ng-scope"
+                                  ></span
+                                  ><!-- end ngIf: showField('address2') --></span
+                                ><!-- end ngIf: showField('address1') --><!-- ngIf: showField('address2') --><span
+                                  ng-if="showField('address2')"
+                                  style="
+                                    font-size: 12px;
+                                    font-family: Arial, sans-serif;
+                                    color: #3b0b11;
+                                  "
+                                  class="ng-binding ng-scope"
+                                  ><!-- ngIf: isAnyFieldEntered('company,address1') --><span
+                                    ng-if="isAnyFieldEntered('company,address1')"
+                                    class="ng-scope"
+                                    >, </span
+                                  ><!-- end ngIf: isAnyFieldEntered('company,address1') -->2140,
+                                  South Africa</span
+                                ><!-- end ngIf: showField('address2') --> </span
+                              ><!-- end ngIf: isAnyFieldEntered('address1,address2,company') --> </span
+                            ><!-- end ngIf: isAnyFieldEntered('company,address1,address2') -->
+                          </td>
+                        </tr>
+                        <!-- ngIf: isAnyFieldEntered('facebookURL,twitterURL,youtubeURL,linkedinURL,instagramURL') -->
+                        <tr
+                          ng-if="isAnyFieldEntered('facebookURL,twitterURL,youtubeURL,linkedinURL,instagramURL')"
+                          class="ng-scope"
+                        >
+                          <td
+                            style="vertical-align: bottom; padding-top: 5px"
+                            valign="bottom"
+                            class="socials"
+                          >
+                            <!-- ngIf: showField('facebookURL') --><span
+                              ng-if="showField('facebookURL')"
+                              class="ng-scope"
+                              ><a
+                                href="https://www.facebook.com/youngIMS"
+                                target="_blank"
+                                rel="noopener"
+                                ><img src="https://imssdarm-sau.org.za/storage/app/media/facebook.svg" alt="facebook-icon"></a
+                              >&nbsp;</span
+                            ><!-- end ngIf: showField('facebookURL') --><!-- ngIf: showField('twitterURL') --><!-- ngIf: showField('youtubeURL') --><span
+                              ng-if="showField('youtubeURL')"
+                              class="ng-scope"
+                              ><a
+                                href="https://www.youtube.com/channel/UC44a29IgnkWu_D7TwK28w5Q"
+                                target="_blank"
+                                rel="noopener"
+                                ><img src="https://imssdarm-sau.org.za/storage/app/media/youtube.svg" alt="youtube-icon"></i></a
+                              >&nbsp;</span
+                            ><!-- end ngIf: showField('youtubeURL') --><!-- ngIf: showField('linkedinURL') --><!-- ngIf: showField('instagramURL') --><span
+                              ng-if="showField('instagramURL')"
+                              class="ng-scope"
+                              ><a
+                                href="https://www.instagram.com/i.m.s_young/"
+                                target="_blank"
+                                rel="noopener"
+                                ><img src="https://imssdarm-sau.org.za/storage/app/media/instagram.svg" alt="instagram-icon"></i></a
+                              >&nbsp;</span
+                            ><!-- end ngIf: showField('instagramURL') --><!-- ngIf: showField('pinterestURL') -->
+                          </td>
+                        </tr>
+                        <!-- end ngIf: isAnyFieldEntered('facebookURL,twitterURL,youtubeURL,linkedinURL,instagramURL') -->
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    colspan="2"
+                    style="font-size: 1px; height: 15px; line-height: 1px"
+                  >
+                    &nbsp;
+                  </td>
+                </tr>
+                <!-- ngIf: showField('banner') -->
+                <tr ng-if="showField('banner')" class="ng-scope">
+                  <td
+                    colspan="2"
+                    style="padding-top: 15px; border-top: 1px dotted #000"
+                  >
+                    <!-- ngIf: showField('bannerURL') --><a
+                      ng-if="showField('bannerURL')"
+                      href="https://drive.google.com/file/d/1ncoQUCtClL-IOiKTSGY3zGJl2dlVElzg/view"
+                      target="_blank"
+                      rel="noopener"
+                      class="ng-scope"
+                      ><img
+                        ng-src="hhttps://imssdarm-sau.org.za/storage/app/media/READINGS.png"
+                        alt="Banner"
+                        id="banner"
+                        style="max-width: 528px; height: auto; border: 0"
+                        src="https://imssdarm-sau.org.za/storage/app/media/READINGS.png"
+                        border="0" /></a
+                    ><!-- end ngIf: showField('bannerURL') -->
+                    <!-- ngIf: !showField('bannerURL') -->
+                  </td>
+                </tr>
+                <!-- end ngIf: showField('banner') -->
+                <!-- ngIf: showField('disclaimer') -->
+                <tr ng-if="showField('disclaimer')" class="ng-scope">
+                  <td
+                    colspan="2"
+                    style="
+                      padding-top: 15px;
+                      line-height: 13px;
+                      font-size: 7pt;
+                      color: #000000;
+                      font-family: Arial, sans-serif;
+                    "
+                    class="ng-binding"
+                  >
+                    The content of this email is confidential and intended for the
+                    recipient specified in message only. It is strictly forbidden to
+                    share any part of this message with any third party, without a
+                    written consent of the sender. If you received this message by
+                    mistake, please reply to this message and follow with its
+                    deletion, so that we can ensure such a mistake does not occur in
+                    the future.
+                  </td>
+                </tr>
+                <!-- end ngIf: showField('disclaimer') -->
+              </tbody>
+            </table>
+            </ng-include>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content-container">
+        <div>
+          <img src="img/LOGO.png" alt="IMS SDA RM Logo">
+          <h6>International Missionary Society of
+            the Seventh Day Adventist Church 
+            Reform Movement © 2022</h6>
+        </div>
+        <div>
+          <form action="">
+            <label for="email">Your Email</label>
+            <input id="email" type="email" name="email" value="" placeholder="Type your email" id="subscriber">
+            <input type="submit" value="submit">
+          </form>
+        </div>
+        <div>
+          <img src="img/mail.svg" alt="email icon" class="footer-socials">
+          <img src="img/Footers-Twitter.svg" alt="Twitter icon" class="footer-socials">
+          <img src="img/Footers-Facebokk.svg" alt="Facebook icon" class="footer-socials">
+          <img src="img/Footers-Instagram.svg" alt="Instagram icon" class="footer-socials">
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    // Retrieve the elements
+    var logoShine = document.querySelector(".logo-shine");
+
+    // Reset the colour animation every 10 seconds
+    let logoShineInterval = setInterval(() => {
+      logoShine.classList.remove("shine-animation");
+
+      void logoShine.offsetWidth;
+
+      logoShine.classList.add("shine-animation");
+    }, 10000);
+
+    // Retrieve the banner image and grab the most dominant colour from it so that it can be used
+    // on the social media icons
+    // Imgcolr.setSwf('http://static.bar.com/dir/imgcolr.swf');
+
+    // var imgs = $('imsLOGO');
+
+    // imgs.imgcolr(function (imsLOGO, color) {
+    //   // `img` refers to the current img element
+    //   console.log(img);
+    //   // `color` is the grabbed color, a string like "#ededed"
+    //   console.log(color);
+    // });
+  </script>
+</html>
