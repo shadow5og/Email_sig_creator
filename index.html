@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script type="text/js" src="js/app.js" defer></script>
+    <script src="js/app.js" defer></script>
     <title>
       Email Signature App - International Missionary Society of the Seventh-Day
       Adventists Reform Movement Church
@@ -535,10 +535,10 @@
     <footer>
       <div class="footer-content-container">
         <div>
-          <img src="img/LOGO.png" alt="IMS SDA RM Logo">
+          <img src="img/LOGO.png" alt="IMS SDA RM Logo" onload="yearGet()">
           <h6>International Missionary Society of
             the Seventh Day Adventist Church 
-            Reform Movement © 2022</h6>
+            Reform Movement © <span id="copyrightYear">2025</span></h6>
         </div>
         <div>
           <form action="">
@@ -548,38 +548,12 @@
           </form>
         </div>
         <div>
-          <img src="img/mail.svg" alt="email icon" class="footer-socials">
-          <img src="img/Footers-Twitter.svg" alt="Twitter icon" class="footer-socials">
-          <img src="img/Footers-Facebokk.svg" alt="Facebook icon" class="footer-socials">
-          <img src="img/Footers-Instagram.svg" alt="Instagram icon" class="footer-socials">
+          <a href="#"><img src="img/mail.svg" alt="email icon" class="footer-socials"></a>
+          <a href="#"><img src="img/Footers-Twitter.svg" alt="Twitter icon" class="footer-socials"></a>
+          <a href="#"><img src="img/Footers-Facebokk.svg" alt="Facebook icon" class="footer-socials"></a>
+          <a href="#"><img src="img/Footers-Instagram.svg" alt="Instagram icon" class="footer-socials"></a>
         </div>
       </div>
     </footer>
   </body>
-  <script>
-    // Retrieve the elements
-    var logoShine = document.querySelector(".logo-shine");
-
-    // Reset the colour animation every 10 seconds
-    let logoShineInterval = setInterval(() => {
-      logoShine.classList.remove("shine-animation");
-
-      void logoShine.offsetWidth;
-
-      logoShine.classList.add("shine-animation");
-    }, 10000);
-
-    // Retrieve the banner image and grab the most dominant colour from it so that it can be used
-    // on the social media icons
-    // Imgcolr.setSwf('http://static.bar.com/dir/imgcolr.swf');
-
-    // var imgs = $('imsLOGO');
-
-    // imgs.imgcolr(function (imsLOGO, color) {
-    //   // `img` refers to the current img element
-    //   console.log(img);
-    //   // `color` is the grabbed color, a string like "#ededed"
-    //   console.log(color);
-    // });
-  </script>
 </html>

@@ -380,6 +380,10 @@ footer .footer-content-container div:last-of-type {
     justify-content: space-around;
 }
 
-footer .footer-content-container div:last-of-type img {
+footer .footer-content-container div:last-of-type a {
+    display: flex;
+}
+
+footer .footer-content-container div:last-of-type a img {
     width: 24px;
 }
