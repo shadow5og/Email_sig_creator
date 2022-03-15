@@ -301,6 +301,9 @@ footer {
     display: flex;
     justify-content: center;
     height: 257px;
+    border-top: black;
+    border-width: 2px;
+    border-style: solid;
 }
 
 footer .footer-content-container {
