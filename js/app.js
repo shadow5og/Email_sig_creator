@@ -17,15 +17,3 @@ function yearGet() {
     element.innerText = thisYear;
 }
 
-// Retrieve the banner image and grab the most dominant colour from it so that it can be used
-// on the social media icons
-// Imgcolr.setSwf('http://static.bar.com/dir/imgcolr.swf');
-
-// var imgs = $('imsLOGO');
-
-// imgs.imgcolr(function (imsLOGO, color) {
-//   // `img` refers to the current img element
-//   console.log(img);
-//   // `color` is the grabbed color, a string like "#ededed"
-//   console.log(color);
-// });
