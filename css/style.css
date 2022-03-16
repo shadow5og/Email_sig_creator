@@ -560,6 +560,7 @@ footer .footer-content-container div:last-of-type a img {
     main .form-and-signature .browser-window {
         right: 31px;
         height: 600px;
+        transform: scale(0.7);
     }
 
     main .form-and-signature .browser-window .email-draft {
@@ -584,6 +585,7 @@ footer .footer-content-container div:last-of-type a img {
 @media (max-width: 414px) {
     main .form-and-signature .browser-window {
         transform: translateX(19px);
+        transform: scale(0.7);
     }
 
     main > h1 {
