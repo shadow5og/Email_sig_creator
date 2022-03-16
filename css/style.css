@@ -1,4 +1,8 @@
 /* Resetting CSS default styles and defining variables */
+body {
+    overflow-x: hidden;
+}
+
 
 * {
   margin: 0;
@@ -98,6 +102,10 @@ h1 {
     line-height: 120%;
 }
 
+header, footer {
+    width: 100vw;
+}
+
 header {
     background-color: var(--dark-brown);
     height: 294px;
@@ -114,7 +122,7 @@ header .logo-container {
 
 header .logo-container img {
   width: 116px;
-  height: 107px;
+  align-self: stretch;
 }
 
 ul {
@@ -270,6 +278,7 @@ main .form-and-signature form .input-container input {
 main .form-and-signature form {
     min-width: 467px;
     margin: 78px 0px 0px 133px;
+    transition: all ease-in-out;
 }
 
 main .form-and-signature form .ico-label-input {
@@ -282,28 +291,29 @@ main .form-and-signature form .ico-label-input {
 
 main .form-and-signature .browser-window {
     width: 693px;
-    height: 726px;
+    height: 678px;
     margin-left: 193px;
     background: url("../img/Device.svg");
     background-size: cover;
     padding: 60px 0px 0px 30px;
     border-radius: 21.1px;
     box-shadow: 19px 37px 74px 25px var(--shadow-colour);
+    transition: all ease-in-out;
 }
 
 main .form-and-signature .browser-window .email-draft {
     font-size: 18px;
     font-weight: medium;
-    width: 468px;
+    max-width: 468px;
 }
 
 footer {
     display: flex;
     justify-content: center;
-    height: 257px;
+    min-height: 257px;
     border-top: black;
     border-width: 2px;
-    border-style: solid;
+    border-top-style: solid;
 }
 
 footer .footer-content-container {
@@ -386,4 +396,220 @@ footer .footer-content-container div:last-of-type a {
 
 footer .footer-content-container div:last-of-type a img {
     width: 24px;
+}
+
+@media (max-width: 1330px) {
+    main .form-and-signature form {
+        margin-left: 50px;
+    }
+
+    main .form-and-signature .browser-window {
+        margin-left: 50px;
+    }
+
+    footer .footer-content-container {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1078px) {
+    main .form-and-signature {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 160px;
+    }
+
+    main .form-and-signature form {
+        margin: 0px;
+    }
+
+    main .form-and-signature .browser-window {
+        margin-top: 50px;
+        height: 671px;
+    }
+    
+    footer {
+        min-height: 400px;
+    }
+
+    footer .footer-content-container {
+        margin: 80px auto 90px auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-content-container div {
+        margin-top: 30px;
+    }
+
+    footer .footer-content-container div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer-content-container div:first-of-type img {
+        margin-top: 50px;
+    }
+
+    footer .footer-content-container div:first-of-type h6 {
+        margin-top: 15px;
+    }
+
+    footer .footer-content-container div:nth-of-type(2) form {
+        height: 50px;
+    }
+
+    /* html {
+        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    } */
+}
+
+@media (max-width: 743px) {
+    ul {
+        margin: auto;
+    }
+
+    /* ul li a {
+        font-size: 14px;
+    } */
+
+    header {
+        height: 107px;
+        flex-direction: row;
+        justify-content: space-around; 
+    }
+
+    header .logo-container {
+        margin: auto 0px auto 0px;
+        justify-self: flex-start;
+    }
+
+    header .logo-container img {
+        width: 63px;
+    }
+
+    main > h1 {
+        width: 452px;
+        font-size: 32px;
+        margin: auto;
+    }
+
+    main > small {
+        width: 86vw;
+        text-align: center;
+        margin: 12px auto 0px auto;
+    }
+
+    main .email-app-container {
+        margin-top: 40px;
+        width: 83vw;
+    }
+    
+
+    main .email-app-container .clients-container .email-client {
+        width: 18vw;
+        min-height: 70px;
+    }
+
+    main .form-and-signature .browser-window {
+        width: 79vw;
+        min-width: 479px;
+        height: 674px;
+        position: relative;
+        right: 33px;
+    }
+}
+
+@media (max-width: 511px) {
+    main .form-and-signature form {
+        width: 354px;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        margin: auto;
+        transform: translateX(18px);
+    }
+
+    main .form-and-signature form .ico-label-input {
+        justify-content: center;
+        height: 47px;
+        margin: 0px auto 12px auto;
+        width: 380px;;
+    }
+
+    /* main .form-and-signature form label {
+        margin-left: auto;
+
+    } */
+
+    main .form-and-signature form span {
+        font-size: 14px;
+    }
+
+    main .form-and-signature form .input-container input {
+        text-indent: 14px;
+        font-size: 14px;
+        height: 47px;
+        min-width: 247px;
+        align-self: center;
+        margin-right: 49px;
+    }
+
+    main .form-and-signature .browser-window {
+        right: 31px;
+        height: 600px;
+    }
+
+    main .form-and-signature .browser-window .email-draft {
+        font-size: 12px;
+        width: 430px;
+    }
+
+    footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
+        text-indent: 14px;
+        font-size: 14px;
+        height: 47px;
+        width: 186px;
+        align-self: center;
+    }
+
+    footer .footer-content-container div:nth-of-type(2) form input[type="submit"] {
+        height: 48px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 414px) {
+    main .form-and-signature .browser-window {
+        transform: translateX(19px);
+    }
+
+    main > h1 {
+        font-size: 28px;
+        text-align: center;
+        transform: translateX(-18px);
+    }
+
+    main small {
+        font-size: 11px;
+    }
+
+    main .email-app-container .clients-container .email-client h5 {
+        font-size: 10px;
+    }
+
+    main .form-and-signature form {
+        transform: translateX(41px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .form-and-signature form .input-container input {
+        text-indent: 9px;
+        margin-right: 136px;
+        min-width: 189px;
+    }
 }

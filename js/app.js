@@ -11,9 +11,15 @@ let logoShineInterval = setInterval(() => {
 }, 10000);
 
 function yearGet() {
-    let d = new Date();
-    let thisYear = d.getFullYear();
-    element = document.querySelector("#copyrightYear");
-    element.innerText = thisYear;
+  let d = new Date();
+  let thisYear = d.getFullYear();
+  element = document.querySelector("#copyrightYear");
+  element.innerText = thisYear;
 }
+
+// const collection = document.body.children;
+// items = Array.from(collection);
+// items.array.forEach(element => {
+//   element.classList.add()
+// });
 
