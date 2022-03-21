@@ -3,7 +3,6 @@ body {
     overflow-x: hidden;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +17,7 @@ div, header, nav, ul, li, footer {
 
 :root {
   --dark-brown: #250a0a;
+  --scroll-shadow-colour: #b14444e3;
   --shadow-colour: #b1444454;
   --shadowX: 19px;
   --shadowY: 37px;
@@ -27,35 +27,30 @@ div, header, nav, ul, li, footer {
   --blur-trans: 0.6;
   --highlighted: #D5C8AD;
   --light-grey: #EEEEEE;
-
+  --medium-font: 500;
+  
   font-family: poppins;
+
+  /* scrollbar style for firefox */
+  scrollbar-color: var(--highlighted) var(--dark-brown);
+  scroll-behavior: smooth;
+  scrollbar-width: 14px;
 }
 
-/* For browsers compatible with the pseudo elements: */
-::scrollbar {
-    width: 14px;
-}
-::scrollbar-track {
-    background-color: var(--dark-brown);
-}
-::scrollbar-thumb {
-    border-radius: 10px;
-    background-color: var(--highlighted);
-    box-shadow: inset 0 0 6px var(--shadow-colour);
-    -webkit-box-shadow: inset 0 0 6px var(--shadow-colour);
-}
-
+/* Styling for the scrollbar */
 ::-webkit-scrollbar {
     width: 14px;
 }
 ::-webkit-scrollbar-track {
     background-color: var(--dark-brown);
+    box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
+    -webkit-box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: var(--highlighted);
-    -webkit-box-shadow: inset 0 0 6px var(--shadow-colour);
-    box-shadow: inset 0 0 6px var(--shadow-colour);
+    box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
+    -webkit-box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
 }
 /* Email Signature Styles */
 
@@ -100,6 +95,16 @@ div, header, nav, ul, li, footer {
 h1 {
     font-size: 53px;
     line-height: 120%;
+}
+
+input {
+    border-color: black;
+    border-style: solid;
+}
+
+.input-active {
+    border-width: medium;
+    border-color: var(--scroll-shadow-colour);
 }
 
 header, footer {
@@ -196,11 +201,14 @@ main .email-app-container .clients-container .email-client {
     width: 138px;
     height: 60px;
     background-color: white;
+    cursor: pointer;
 }
 
+/* Styles for when the box with the email client logo is clicked. */
 .clicked {
     border-width: thin;
-    border-color: black; 
+    border-color: black;
+    border-style: solid; 
 }
 
 main .email-app-container .clients-container .email-client .icon-container {
@@ -244,7 +252,7 @@ main .email-app-container .clients-container .email-client:last-of-type {
 
 main .form-and-signature {
     margin-top: 92px;
-    padding-bottom: 275px;
+    padding-bottom: 158px;
     display: flex;
     justify-content: center;
 }
@@ -264,20 +272,20 @@ main .form-and-signature form span {
 }
 
 main .form-and-signature form .input-container {
-    margin-left: auto;
+    margin-left: 2vw;
 }
 
 main .form-and-signature form .input-container input {
     min-width: 295px;
-    border-radius: 7px;
+    border-radius: 4px;
     text-indent: 20px;
-    font-weight: medium;
+    font-weight: var(--medium-font);
     font-size: 18px;
 }
 
 main .form-and-signature form {
     min-width: 467px;
-    margin: 78px 0px 0px 133px;
+    margin: 78px 0px 0px 9.236111111vw;
     transition: all ease-in-out;
 }
 
@@ -291,8 +299,8 @@ main .form-and-signature form .ico-label-input {
 
 main .form-and-signature .browser-window {
     width: 693px;
-    height: 678px;
-    margin-left: 193px;
+    height: 702px;
+    margin-left: 13.402777778vw;
     background: url("../img/Device.svg");
     background-size: cover;
     padding: 60px 0px 0px 30px;
@@ -303,9 +311,105 @@ main .form-and-signature .browser-window {
 
 main .form-and-signature .browser-window .email-draft {
     font-size: 18px;
-    font-weight: medium;
+    font-weight: var(--medium-font);
     max-width: 468px;
 }
+
+.copy-button {
+    margin: 0px auto 145px auto;
+    display: none;
+    justify-content: center;
+}
+
+main .modals {
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: flex !important;
+}
+
+main .modals .modal {
+    position: fixed;
+    z-index: 1010;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: var(--dark-brown);
+    height: 400px;
+    max-height: 100%;
+    width:600px;
+    max-width: 100%;
+}
+
+main .modals .modal .modal-contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px 20px 20px;
+    
+    font-size: 1.5em;
+    /* text-indent: 0.83em; */
+}
+
+main .modals .modal .modal-contents .list-container {
+    font-size: 0.7em;
+    height: 68%;
+    overflow: auto;
+}
+
+main .modals .modal .modal-contents ol {
+    margin-left: 6%;
+}
+
+.button {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--dark-brown);
+    border-radius: 4px;
+    border-color: var(--dark-brown);
+    width: 200px;
+    max-width: 100%;
+    height: 45px;
+    cursor: pointer;
+}
+
+main .modals .modal .modal-contents .button {
+    position: absolute;
+    bottom: 5%;
+    right: 8.25%;
+    margin-top: 3%;
+}
+
+main .modals .modal-overlay {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: #d4c9c959;
+} 
 
 footer {
     display: flex;
@@ -353,9 +457,9 @@ footer .footer-content-container div:nth-of-type(2) form {
 
 footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
     width: 315px;
-    border-radius: 7px;
+    border-radius: 4px;
     text-indent: 20px;
-    font-weight: medium;
+    font-weight: var(--medium-font);
     font-size: 18px;
 }
 
@@ -374,12 +478,14 @@ footer .footer-content-container div:nth-of-type(2) form label {
 footer .footer-content-container div:nth-of-type(2) form input[type="submit"] {
     text-align: center;
     font-size: 18px;
+    font-weight: 700;
     color: white;
     background-color: var(--dark-brown);
-    border-radius: 7px;
+    border-radius: 4px;
     border-color: var(--dark-brown);
-    width: 70px;
+    width: 80px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 footer .footer-content-container div:last-of-type {
@@ -425,7 +531,7 @@ footer .footer-content-container div:last-of-type a img {
 
     main .form-and-signature .browser-window {
         margin-top: 50px;
-        height: 671px;
+        height: 696px;
     }
     
     footer {
@@ -467,6 +573,10 @@ footer .footer-content-container div:last-of-type a img {
 }
 
 @media (max-width: 743px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
     ul {
         margin: auto;
     }
@@ -496,6 +606,10 @@ footer .footer-content-container div:last-of-type a img {
         margin: auto;
     }
 
+    main h2 {
+        font-size: 30px;
+    }
+
     main > small {
         width: 86vw;
         text-align: center;
@@ -513,16 +627,39 @@ footer .footer-content-container div:last-of-type a img {
         min-height: 70px;
     }
 
+    main .form-and-signature {
+        padding-bottom: 102px;
+    }
+
     main .form-and-signature .browser-window {
         width: 79vw;
         min-width: 479px;
-        height: 674px;
-        position: relative;
-        right: 33px;
+        transform: translateX(-3.5599999999999996vw);
+    }
+
+    .copy-button {
+        margin: 0px auto 76px auto;
     }
 }
 
 @media (max-width: 511px) {
+    main .modals .modal {
+        max-width: 84%;
+    
+    }
+
+    main .modals .modal .modal-contents .list-container {
+        width: 106%;
+    }
+
+    main .modals .modal .modal-contents ol{
+        font-size: 14px
+    }
+
+    main .form-and-signature {
+        padding-bottom: 1vh;
+    }
+
     main .form-and-signature form {
         width: 354px;
         /* display: flex;
@@ -568,6 +705,14 @@ footer .footer-content-container div:last-of-type a img {
         width: 430px;
     }
 
+    /* .modal {
+        font-size: ;
+    } */
+
+    .button {
+        font-size: 14px;
+    }
+
     footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
         text-indent: 14px;
         font-size: 14px;
@@ -581,17 +726,35 @@ footer .footer-content-container div:last-of-type a img {
         font-size: 14px;
     }
 }
+@media (max-width: 425px) {
+    main .modals .modal {
+        left: 45%;
+    }
+
+    main .form-and-signature .browser-window {
+        transform: translateX(-10.68vw) scale(0.7);
+        box-shadow: 0px 15px 56px -3px var(--shadow-colour);
+    }
+}
 
 @media (max-width: 414px) {
+    main .modals .modal {
+        left: 40.8%;
+        max-width: 71%;
+    }
+
     main .form-and-signature .browser-window {
-        transform: translateX(19px);
-        transform: scale(0.7);
+        transform: translateX(-5.68vw) scale(0.7);
     }
 
     main > h1 {
         font-size: 28px;
         text-align: center;
-        transform: translateX(-18px);
+        transform: translateX(-4.34vw);
+    }
+
+    main h2 {
+        font-size: 26px;
     }
 
     main small {
@@ -603,7 +766,7 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature form {
-        transform: translateX(41px);
+        transform: translateX(9.9vw);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -614,4 +777,32 @@ footer .footer-content-container div:last-of-type a img {
         margin-right: 136px;
         min-width: 189px;
     }
+
+    @media (max-width: 375px) {
+        main .modals .modal .modal-contents .list-container {
+            width: 109%; 
+        }
+
+        main .modals .modal {
+            left: 38.55%;
+            max-width: 66%;
+        }
+
+        header .logo-container {
+            margin: auto 0px auto 3vw;
+        }
+
+        nav {
+            transform: translateX(-5vw);
+        }
+
+        main > h1 {
+            transform: translateX(-10.34vw);
+        }
+        
+        main .form-and-signature form {
+            transform: translateX(4.899999999999999vw);
+        }
+    }
 }
+

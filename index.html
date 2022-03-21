@@ -221,8 +221,17 @@
                         "
                         id="sName"
                         class="ng-binding"
-                        >Your Name</span
-                      ></strong
+                        >Your</span
+                      > <span
+                      style="
+                        font-size: 18pt;
+                        font-family: Arial, sans-serif;
+                        color: #702b1f;
+                      "
+                      id="sSurname"
+                      class="ng-binding"
+                      > Name</span
+                    ></strong
                     >
                     <!-- ngIf: isAnyFieldEntered('title,website') --><span
                       ng-if="isAnyFieldEntered('title,website')"
@@ -238,7 +247,26 @@
                       "
                       class="ng-binding ng-scope"
                       id="sDept"
-                      >Example Dept. Your Role</strong
+                      >Example</strong
+                    ><strong
+                    ng-if="showField('title')"
+                    style="
+                      font-family: Arial, sans-serif;
+                      font-size: 10pt;
+                      color: #3b0b11;
+                    "
+                    class="ng-binding ng-scope"
+                    > Dept.</strong
+                    ><strong
+                    ng-if="showField('title')"
+                    style="
+                      font-family: Arial, sans-serif;
+                      font-size: 10pt;
+                      color: #3b0b11;
+                    "
+                    class="ng-binding ng-scope"
+                    id="sRole"
+                    >Your Role</strong
                     ><!-- end ngIf: showField('title') -->
                     <strong
                       ><!-- ngIf: showField('website') --><span
@@ -343,9 +371,8 @@
                                   font-size: 12px;
                                 "
                                 class="ng-binding"
-                                id="sMobile"
                                 ><strong>Mobile:</strong>
-                                +27 82 000 3334<br /></span></span
+                                <span id="sMobile">+27 82 000 3334</span><br /></span></span
                             ><!-- end ngIf: showField('mobile') -->
                             <!-- ngIf: showField('email') --><span
                               ng-if="showField('email')"
@@ -530,6 +557,22 @@
           </div>
         </div>
       </section>
+      <section class="copy-button">
+        <input type="button" value="life" class="button">
+      </section>
+      <section class="modals">
+        <div class="modal">
+          <div class="modal-contents">
+            <h2>Instructions</h2>
+            <div class="list-container">
+              <ol>
+              </ol>
+            </div>
+            <input class="button" type="button" id="done" value="I'm Done!">
+          </div>
+        </div>
+        <div class="modal-overlay"></div>
+      </section>
     </main>
     <footer>
       <div class="footer-content-container">
@@ -540,7 +583,7 @@
             Reform Movement © <span id="copyrightYear">2025</span></h6>
         </div>
         <div>
-          <form action="">
+          <form>
             <label for="email">Your Email</label>
             <input id="email" type="email" name="email" value="" placeholder="Type your email" id="subscriber">
             <input type="submit" value="submit">
