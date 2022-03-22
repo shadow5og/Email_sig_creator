@@ -684,7 +684,8 @@ footer .footer-content-container div:last-of-type a img {
     }
     
     main .modals .modal {
-        max-width: 84%;
+        max-width: 83%;
+        transform: translate(-54%, -50%);
     }
 
     main .modals .modal .modal-contents .list-container {
@@ -791,7 +792,8 @@ footer .footer-content-container div:last-of-type a img {
 
 @media (max-width: 425px) {
     main .modals .modal {
-        left: 45%;
+        left: 44%;
+        max-width: 71%;
     }
 
     main .text-container > h1 {
@@ -808,7 +810,7 @@ footer .footer-content-container div:last-of-type a img {
 
 @media (max-width: 414px) {
     main .modals .modal {
-        left: 40.8%;
+        left: 42.8%;
         max-width: 71%;
     }
 
