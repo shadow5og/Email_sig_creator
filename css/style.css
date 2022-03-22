@@ -160,10 +160,19 @@ main {
     margin-top: 73px;
 }
 
-main > h1, small {
+main .text-container {
+    width: 100%;
+    padding: auto 10px auto 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main .text-container > h1, small {
     display: flex;
     justify-content: center;
     color: var(--dark-brown);
+
 }
 
 main small {
@@ -601,7 +610,7 @@ footer .footer-content-container div:last-of-type a img {
         width: 63px;
     }
 
-    main > h1 {
+    main .text-container > h1 {
         width: 452px;
         font-size: 32px;
         margin: auto;
@@ -642,6 +651,22 @@ footer .footer-content-container div:last-of-type a img {
         margin: 0px auto 76px auto;
     }
 }
+
+/* @media (max-width: 653px) {
+    main .text-container { 
+        justify-content: center;
+        width: 70vw;
+    }
+
+    main .text-container > h1 {
+        text-align: right;
+        align-self: center;
+    }
+    
+    main .text-container small {
+        width: 90%;
+    }
+} */
 
 @media (max-width: 511px) {
     main small {
@@ -753,14 +778,15 @@ footer .footer-content-container div:last-of-type a img {
 
 
 }
+
 @media (max-width: 425px) {
     main .modals .modal {
         left: 45%;
     }
 
-    main > h1 {
+    main .text-container > h1 {
         width: 339px;
-        text-align: right;
+        /* text-align: right; */
     }
 
     main .form-and-signature .browser-window {
@@ -780,11 +806,11 @@ footer .footer-content-container div:last-of-type a img {
         transform: translateX(-8.68vw) scale(0.725);
     }
 
-    main > h1 {
+    main .text-container > h1 {
         font-size: 28px;
         /* text-align: center; */
         display: grid;
-        transform: translateX(-4.91vw);
+        transform: translateX(0.08999999999999986vw);
     }
 
     main > small {
@@ -835,8 +861,8 @@ footer .footer-content-container div:last-of-type a img {
         transform: translateX(-5vw);
     }
 
-    main > h1 {
-        transform: translateX(-10.34vw);
+    main .text-container > h1 {
+        transform: translateX(0.6600000000000001vw);
     }
 
     main > small {
