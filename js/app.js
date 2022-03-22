@@ -130,6 +130,8 @@ function showModal(e) {
     list =
       modals.firstElementChild.firstElementChild.children[1].firstElementChild;
 
+  document.body.classList.toggle('no-scroll');
+  
   if (btn.name === "Exchange Server" || btn.name === "Thunderbird") {
     CopyToClipboard(document.querySelector("#signaturePreview"), true);
   } else {
@@ -196,6 +198,7 @@ document
 // Hide the modal when the "I'm Done" button is clicked.
 document.querySelector(".modals .button").addEventListener("click", (e) => {
   document.querySelector(".modals").classList.toggle("show");
+  document.body.classList.toggle('no-scroll');
 });
 
 emailClients = document.querySelectorAll(".email-client");
