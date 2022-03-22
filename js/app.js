@@ -131,7 +131,7 @@ function showModal(e) {
       modals.firstElementChild.firstElementChild.children[1].firstElementChild;
 
   if (btn.name === "Exchange Server" || btn.name === "Thunderbird") {
-    CopyToClipboard(true);
+    CopyToClipboard(document.querySelector("#signaturePreview"), true);
   } else {
     CopyToClipboard();
   }
