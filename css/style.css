@@ -582,6 +582,16 @@ footer .footer-content-container div:last-of-type a img {
     } */
 }
 
+@media (max-width: 768px) {
+    .button {
+        transform: scale(0.65);
+    }
+
+    main .modals .modal .modal-contents .button {
+        right: 3.25%;
+    }
+}
+
 @media (max-width: 743px) {
     ::-webkit-scrollbar {
         width: 6px;
