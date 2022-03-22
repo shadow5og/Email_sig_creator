@@ -467,8 +467,9 @@ footer .footer-content-container div:nth-of-type(2) form label {
     background-color: white;
     color: var(--dark-brown);
     font-weight: bold;
+    text-align: center;
     font-size: 14px;
-    width: 77px;
+    width: 82px;
     height: 21px;
     position: absolute;
     left: 20px;
@@ -643,9 +644,12 @@ footer .footer-content-container div:last-of-type a img {
 }
 
 @media (max-width: 511px) {
+    main small {
+        font-size: 13px;
+    }
+    
     main .modals .modal {
         max-width: 84%;
-    
     }
 
     main .modals .modal .modal-contents .list-container {
@@ -666,7 +670,7 @@ footer .footer-content-container div:last-of-type a img {
         flex-direction: column;
         align-items: center; */
         margin: auto;
-        transform: translateX(18px);
+        transform: translateX(10%);
     }
 
     main .form-and-signature form .ico-label-input {
@@ -689,15 +693,17 @@ footer .footer-content-container div:last-of-type a img {
         text-indent: 14px;
         font-size: 14px;
         height: 47px;
-        min-width: 247px;
+        min-width: 226px;
         align-self: center;
-        margin-right: 49px;
+        transform: translateX(-45%);
     }
 
     main .form-and-signature .browser-window {
-        right: 31px;
+        /* right: 31px; */
         height: 600px;
-        transform: scale(0.7);
+        transform: scale(0.875) translateX(-0.25%);
+        box-shadow: 0px 23px 22px 2px var(--shadow-colour);
+        margin: 40px auto auto auto;
     }
 
     main .form-and-signature .browser-window .email-draft {
@@ -713,6 +719,15 @@ footer .footer-content-container div:last-of-type a img {
         font-size: 14px;
     }
 
+    footer .footer-content-container div {
+        margin-top: 45px;
+    }
+
+    footer .footer-content-container div:first-of-type h6 {
+        margin-top: 19px;
+        font-size: 10px;
+    }
+
     footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
         text-indent: 14px;
         font-size: 14px;
@@ -725,6 +740,18 @@ footer .footer-content-container div:last-of-type a img {
         height: 48px;
         font-size: 14px;
     }
+
+    footer .footer-content-container div:nth-of-type(2) form label {
+        top: -6px;
+        font-size: 12px;
+        width: 70px;
+    }
+
+    main .email-app-container .clients-container .email-client h6 {
+        font-size: 10px;
+    }
+
+
 }
 @media (max-width: 425px) {
     main .modals .modal {
@@ -732,8 +759,9 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature .browser-window {
-        transform: translateX(-10.68vw) scale(0.7);
-        box-shadow: 0px 15px 56px -3px var(--shadow-colour);
+        /* transform: translateX(-10.68vw) scale(0.7);
+        box-shadow: 0px 15px 56px -3px var(--shadow-colour); */
+        margin: -29px auto auto auto;
     }
 }
 
@@ -744,7 +772,7 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature .browser-window {
-        transform: translateX(-5.68vw) scale(0.7);
+        transform: translateX(-8.68vw) scale(0.725);
     }
 
     main > h1 {
@@ -758,7 +786,7 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main small {
-        font-size: 11px;
+        font-size: 9px;
     }
 
     main .email-app-container .clients-container .email-client h5 {
@@ -766,7 +794,7 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature form {
-        transform: translateX(9.9vw);
+        transform: translateX(10.899999999999999vw);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -774,7 +802,7 @@ footer .footer-content-container div:last-of-type a img {
 
     main .form-and-signature form .input-container input {
         text-indent: 9px;
-        margin-right: 136px;
+        transform: translateX(-79%);
         min-width: 189px;
     }
 
@@ -797,11 +825,15 @@ footer .footer-content-container div:last-of-type a img {
         }
 
         main > h1 {
-            transform: translateX(-10.34vw);
+            transform: translateX(-9.34vw);
         }
         
         main .form-and-signature form {
             transform: translateX(4.899999999999999vw);
+        }
+
+        main .form-and-signature .browser-window {
+            transform: translateX(-14.68vw) scale(0.725);
         }
     }
 }
