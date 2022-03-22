@@ -790,7 +790,7 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature .browser-window {
-        /* transform: translateX(-10.68vw) scale(0.7);
+        transform: scale(0.875) translateX(-6.25%);
         box-shadow: 0px 15px 56px -3px var(--shadow-colour); */
         margin: -29px auto auto auto;
     }
@@ -844,6 +844,10 @@ footer .footer-content-container div:last-of-type a img {
 }
 
 @media (max-width: 375px) {
+    ul li a{
+        font-size: 14px;
+    }
+
     main .modals .modal .modal-contents .list-container {
         width: 109%; 
     }
@@ -870,11 +874,79 @@ footer .footer-content-container div:last-of-type a img {
     }
     
     main .form-and-signature form {
-        transform: translateX(7.899999999999999vw);
+        transform: translateX(10.899999999999999vw);
     }
 
     main .form-and-signature .browser-window {
-        transform: translateX(-14.68vw) scale(0.725);
+        /* transform: translateX(-11.68vw) scale(0.725); */
+        transform: translate(-15.68vw, -4vh) scale(0.625);
     }
 }
 
+@media (max-width: 325px) {
+    ul li a{
+        font-size: 14px;
+    }
+
+    .button {
+        height: 41px;
+    }
+
+    main .email-app-container .clients-container .email-client h5 {
+        font-size: 7px;
+        margin-top: 10px;
+    }
+
+    main .form-and-signature {
+        margin-top: 55px;
+    }
+
+    main .form-and-signature form span {
+        font-size: 12px;
+    }
+
+    main .form-and-signature form .input-container input {
+        font-size: 12px;
+        transform: translateX(-99%);
+        min-width: 174px;
+        height: 41px;
+    }
+
+    main .form-and-signature form {
+        transform: translateX(3.8999999999999986vw);
+    }
+
+    main .form-and-signature form label img {
+        width: 17px;
+    }
+
+    main .form-and-signature .browser-window {
+        transform: translate(-24.68vw,  -4vh) scale(0.625);
+    }
+
+    footer .footer-content-container div:first-of-type h6 {
+        font-size: 8px;
+    }
+
+    footer .footer-content-container div:nth-of-type(2) form {
+        height: 41px;
+    }
+
+    footer .footer-content-container div:nth-of-type(2) form label {
+        height: 7px;
+        width: 55px;
+        font-size: 9px;
+        top: -4px;
+    }
+
+    footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
+        text-indent: 9px;
+        font-size: 12px;
+        min-width: 174px;
+        height: 41px;
+    }
+
+    footer .footer-content-container div:nth-of-type(2) form input[type="submit"] {
+        height: 41px;
+    }
+}
