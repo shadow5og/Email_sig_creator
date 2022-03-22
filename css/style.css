@@ -758,6 +758,11 @@ footer .footer-content-container div:last-of-type a img {
         left: 45%;
     }
 
+    main > h1 {
+        width: 339px;
+        text-align: right;
+    }
+
     main .form-and-signature .browser-window {
         /* transform: translateX(-10.68vw) scale(0.7);
         box-shadow: 0px 15px 56px -3px var(--shadow-colour); */
@@ -777,8 +782,13 @@ footer .footer-content-container div:last-of-type a img {
 
     main > h1 {
         font-size: 28px;
-        text-align: center;
-        transform: translateX(-4.34vw);
+        /* text-align: center; */
+        display: grid;
+        transform: translateX(-4.91vw);
+    }
+
+    main > small {
+        transform: translateX(-0.63%);
     }
 
     main h2 {
@@ -805,36 +815,40 @@ footer .footer-content-container div:last-of-type a img {
         transform: translateX(-79%);
         min-width: 189px;
     }
+}
 
-    @media (max-width: 375px) {
-        main .modals .modal .modal-contents .list-container {
-            width: 109%; 
-        }
+@media (max-width: 375px) {
+    main .modals .modal .modal-contents .list-container {
+        width: 109%; 
+    }
 
-        main .modals .modal {
-            left: 38.55%;
-            max-width: 66%;
-        }
+    main .modals .modal {
+        left: 38.55%;
+        max-width: 66%;
+    }
 
-        header .logo-container {
-            margin: auto 0px auto 3vw;
-        }
+    header .logo-container {
+        margin: auto 0px auto 3vw;
+    }
 
-        nav {
-            transform: translateX(-5vw);
-        }
+    nav {
+        transform: translateX(-5vw);
+    }
 
-        main > h1 {
-            transform: translateX(-9.34vw);
-        }
-        
-        main .form-and-signature form {
-            transform: translateX(4.899999999999999vw);
-        }
+    main > h1 {
+        transform: translateX(-10.34vw);
+    }
 
-        main .form-and-signature .browser-window {
-            transform: translateX(-14.68vw) scale(0.725);
-        }
+    main > small {
+        transform: translateX(-0.63%);
+    }
+    
+    main .form-and-signature form {
+        transform: translateX(7.899999999999999vw);
+    }
+
+    main .form-and-signature .browser-window {
+        transform: translateX(-14.68vw) scale(0.725);
     }
 }
 
