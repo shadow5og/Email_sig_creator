@@ -38,12 +38,12 @@ div, header, nav, ul, li, footer {
   /* scrollbar style for firefox */
   scrollbar-color: var(--highlighted) var(--dark-brown);
   scroll-behavior: smooth;
-  scrollbar-width: 14px;
+  scrollbar-width: 9px;
 }
 
 /* Styling for the scrollbar */
 ::-webkit-scrollbar {
-    width: 14px;
+    width: 9px;
 }
 ::-webkit-scrollbar-track {
     background-color: var(--dark-brown);
