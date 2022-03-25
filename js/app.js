@@ -243,7 +243,7 @@ for (const input of inputs) {
   }
 
   input.addEventListener("keyup", (e) => {
-    var t = []; // Pair the setTimer ID and the input element being targeted using that array.
+    let t = []; // Pair the setTimer ID and the input element being targeted using that array.
 
     // Reset the timer every time a key is pressed within the same input.
     let index = 0;
