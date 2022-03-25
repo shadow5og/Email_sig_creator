@@ -162,21 +162,25 @@ ul li a:hover {
 
 main {
     margin-top: 73px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 
 main .text-container {
-    width: 100%;
+    width: 80%;
     padding: auto 10px auto 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 main .text-container > h1, small {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     color: var(--dark-brown);
-
 }
 
 main small {
@@ -268,6 +272,7 @@ main .form-and-signature {
     padding-bottom: 158px;
     display: flex;
     justify-content: center;
+    max-width: 100%;
 }
 
 main .form-and-signature form label, .input-container {
@@ -276,7 +281,10 @@ main .form-and-signature form label, .input-container {
 
 main .form-and-signature form label {
     align-self: center;
-    margin-right: auto;
+    margin-right: 0px;
+    flex-basis: 37%;
+    display: flex;
+    align-items: center;
 }
 
 main .form-and-signature form span {
@@ -285,7 +293,11 @@ main .form-and-signature form span {
 }
 
 main .form-and-signature form .input-container {
-    margin-left: 2vw;
+    /* margin-left: 2vw; */
+    flex-basis: 72%;
+    padding: 0px;
+    max-width: 100%;
+    width: 31%;
 }
 
 main .form-and-signature form .input-container input {
@@ -521,10 +533,13 @@ footer .footer-content-container div:last-of-type a img {
 @media (max-width: 1330px) {
     main .form-and-signature form {
         margin-left: 50px;
+        max-width: 100%;
     }
 
     main .form-and-signature .browser-window {
         margin-left: 50px;
+        max-width: 100%;
+        width: 533px;
     }
 
     footer .footer-content-container {
@@ -533,6 +548,12 @@ footer .footer-content-container div:last-of-type a img {
 }
 
 @media (max-width: 1078px) {
+    main {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+    }
+    
     main .form-and-signature {
         flex-direction: column;
         align-items: center;
@@ -625,7 +646,7 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .text-container > h1 {
-        width: 452px;
+        width: 100%;
         font-size: 32px;
         margin: auto;
     }
@@ -656,9 +677,9 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature .browser-window {
-        width: 79vw;
+        width: 79%;
         min-width: 479px;
-        transform: translateX(-3.5599999999999996vw);
+        /* transform: translateX(-3.5599999999999996vw); */
     }
 
     .copy-button {
@@ -683,13 +704,17 @@ footer .footer-content-container div:last-of-type a img {
 } */
 
 @media (max-width: 511px) { 
+    main .text-container{
+      width: 71%;
+    }
+    
     main small {
         font-size: 13px;
     }
     
     main .modals .modal {
-        max-width: 83%;
-        transform: translate(-53%, -50%);
+        max-width: 92%;
+        /* transform: translate(-53%, -50%); */
         height: 276px;
     }
 
@@ -714,23 +739,41 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature {
-        padding-bottom: 1vh;
+      padding-bottom: 1vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 92px auto auto auto;
+      width: 100vw;
     }
 
     main .form-and-signature form {
-        width: 354px;
+        display: flex;
+        flex-direction: column;
+        /* align-self: center; */
+        align-items: flex-end;
+        max-width: 100%;
+        width: 93%;
         /* display: flex;
         flex-direction: column;
         align-items: center; */
-        margin: auto;
-        transform: translateX(10%);
+        margin: 0px auto 0px auto;
+        /* transform: translateX(7%); */
+    }
+
+    main .form-and-signature form label .icon-container {
+        display:flex;
     }
 
     main .form-and-signature form .ico-label-input {
-        justify-content: center;
+        justify-content: flex-end;
         height: 47px;
-        margin: 0px auto 12px auto;
-        width: 380px;;
+        margin: 0px 0px 12px 0px;
+        max-width: 100%;
+        padding: 0px;
+        min-width: 0px;
+        width: 87%;
+        /* flex-basis: 70%; */
     }
 
     /* main .form-and-signature form label {
@@ -739,22 +782,24 @@ footer .footer-content-container div:last-of-type a img {
     } */
 
     main .form-and-signature form span {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     main .form-and-signature form .input-container input {
         text-indent: 14px;
-        font-size: 14px;
+        font-size: 12px;
         height: 47px;
-        min-width: 226px;
+        min-width: 0px;
+        max-width: 100%;
+        width: 66%;
         align-self: center;
-        transform: translateX(-45%);
+        /* transform: translateX(-45%); */
     }
 
     main .form-and-signature .browser-window {
         /* right: 31px; */
         height: 600px;
-        transform: scale(0.875) translateX(-0.25%);
+        transform: scale(0.875);
         box-shadow: 0px 23px 22px 2px var(--shadow-colour);
         margin: 40px auto auto auto;
     }
@@ -809,17 +854,20 @@ footer .footer-content-container div:last-of-type a img {
 
 @media (max-width: 482px) {
     main .modals .modal {
-        left: 49%;
-        max-width: 71%;
+        /* left: 50%; */
+        /* max-width: 71%; */
     }
 
     main .text-container > h1 {
-        width: 339px;
+        /* width: 339px; */
         /* text-align: right; */
     }
 
     main .form-and-signature .browser-window {
-        transform: scale(0.875) translateX(-6.25%);
+        display: flex;
+        transform: scale(0.8);
+        align-self: center;
+        align-items: center;
         box-shadow: 0px 15px 56px -3px var(--shadow-colour); */
         margin: -29px auto auto auto;
     }
@@ -827,26 +875,31 @@ footer .footer-content-container div:last-of-type a img {
 
 @media (max-width: 446px) {
   main .modals .modal {
-    left: 42%;
+    /* left: 42%; */
     /* max-width: 71%; */
+  }
+
+  main .form-and-signature .browser-window {
+    transform: scale(0.7);
+    margin: 0px;
   }
 }
 
 @media (max-width: 414px) {
     main .modals .modal {
-        left: 39.8%;
-        max-width: 71%;
+        /* left: 39.8%; */
+        /* max-width: 71%; */
     }
 
     main .form-and-signature .browser-window {
-        transform: translateX(-8.68vw) scale(0.725);
+        transform: scale(0.725);
     }
 
     main .text-container > h1 {
         font-size: 28px;
         /* text-align: center; */
         display: grid;
-        transform: translateX(0.08999999999999986vw);
+        /* transform: translateX(0.08999999999999986vw); */
     }
 
     main > small {
@@ -866,16 +919,29 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature form {
-        transform: translateX(10.899999999999999vw);
-        display: flex;
-        flex-direction: column;
+        /* transform: translateX(10.899999999999999vw); */
+        /* display: flex; */
+        /* flex-direction: column; */
         align-items: center;
+        max-width: 150%;
+        width: 72%;
+    }
+
+    main .form-and-signature form .ico-label-input {
+      width: 75%;
+      justify-content: flex-start;
+    }
+
+    main .form-and-signature form .input-container {
+        width: 34%;
+        min-width: 0px;
     }
 
     main .form-and-signature form .input-container input {
         text-indent: 9px;
-        transform: translateX(-79%);
-        min-width: 189px;
+        /* transform: translateX(-79%); */
+        /* min-width: 140px; */
+        width: 75%;
     }
 }
 
@@ -884,13 +950,26 @@ footer .footer-content-container div:last-of-type a img {
         font-size: 14px;
     }
 
+    main .form-and-signature {
+      width: 100vw;
+    }
+
+    main .form-and-signature form .ico-label-input {
+      width: 81%;
+      justify-content: center;
+    }
+
+    main .form-and-signature form label {
+      flex-basis: 45%;
+    }
+
     main .modals .modal .modal-contents .list-container {
         width: 109%; 
     }
 
     main .modals .modal {
-        left: 38.55%;
-        max-width: 66%;
+        /* left: 38.55%; */
+        /* max-width: 66%; */
     }
 
     header .logo-container {
@@ -902,7 +981,7 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .text-container > h1 {
-        transform: translateX(0.6600000000000001vw);
+        /* transform: translateX(0.6600000000000001vw); */
     }
 
     main > small {
@@ -910,12 +989,15 @@ footer .footer-content-container div:last-of-type a img {
     }
     
     main .form-and-signature form {
-        transform: translateX(10.899999999999999vw);
+        /* transform: translateX(10.899999999999999vw); */
+        align-items: center;
+        min-width: 0px;
+        width: 115%;
     }
 
     main .form-and-signature .browser-window {
         /* transform: translateX(-11.68vw) scale(0.725); */
-        transform: translate(-15.68vw, -4vh) scale(0.625);
+        transform: scale(0.625);
     }
 }
 
@@ -943,13 +1025,13 @@ footer .footer-content-container div:last-of-type a img {
 
     main .form-and-signature form .input-container input {
         font-size: 12px;
-        transform: translateX(-99%);
-        min-width: 174px;
+        /* transform: translateX(-99%); */
+        /* min-width: 174px; */
         height: 41px;
     }
 
     main .form-and-signature form {
-        transform: translateX(3.8999999999999986vw);
+        /* transform: translateX(3.8999999999999986vw); */
     }
 
     main .form-and-signature form label img {
@@ -957,7 +1039,7 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature .browser-window {
-        transform: translate(-24.68vw,  -4vh) scale(0.625);
+        transform: scale(0.625);
     }
 
     footer .footer-content-container div:first-of-type h6 {
