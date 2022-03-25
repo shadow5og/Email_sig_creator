@@ -284,7 +284,7 @@ main .form-and-signature form label {
     margin-right: 0px;
     flex-basis: 37%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 main .form-and-signature form span {
@@ -783,6 +783,10 @@ footer .footer-content-container div:last-of-type a img {
 
     main .form-and-signature form span {
         font-size: 12px;
+    }
+
+    main .form-and-signature form label {
+      align-items: center;
     }
 
     main .form-and-signature form .input-container input {
