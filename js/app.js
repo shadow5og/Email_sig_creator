@@ -11,12 +11,12 @@ let logoShineInterval = setInterval(() => {
 }, 10000);
 
 // I dynamically set the year of the copy write statement at the footer to the current year.
-function yearGet() {
+(function yearGet() {
   let d = new Date();
   let thisYear = d.getFullYear(),
     element = document.querySelector("#copyrightYear");
   element.innerText = thisYear;
-}
+})()
 
 //Copying the element to the clipboard.
 function CopyToClipboard(
