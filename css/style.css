@@ -1,24 +1,22 @@
-/* Resetting CSS default styles and defining variables */
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
-
 .no-scroll {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
-
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
-
-div, header, nav, ul, li, footer {
+div,
+header,
+nav,
+ul,
+li,
+footer {
   overflow: visible;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 :root {
   --dark-brown: #250a0a;
   --scroll-shadow-colour: #b14444e3;
@@ -29,35 +27,24 @@ div, header, nav, ul, li, footer {
   --spread: 25px;
   --background-blur: 45px;
   --blur-trans: 0.6;
-  --highlighted: #D5C8AD;
-  --light-grey: #EEEEEE;
+  --highlighted: #d5c8ad;
+  --light-grey: #eeeeee;
   --medium-font: 500;
-  
   font-family: poppins;
-
-  /* scrollbar style for firefox */
-  scrollbar-color: var(--highlighted) var(--dark-brown);
   scroll-behavior: smooth;
-  scrollbar-width: 9px;
 }
-
-/* Styling for the scrollbar */
 ::-webkit-scrollbar {
-    width: 9px;
+  width: 9px;
 }
 ::-webkit-scrollbar-track {
-    background-color: var(--dark-brown);
-    box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
-    -webkit-box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
+  background-color: var(--dark-brown);
+  box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
 }
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: var(--highlighted);
-    box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
-    -webkit-box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
+  border-radius: 10px;
+  background-color: var(--highlighted);
+  box-shadow: inset 0 0 6px var(--scroll-shadow-colour);
 }
-/* Email Signature Styles */
-
 @keyframes shine {
   0% {
     left: 107px;
@@ -66,943 +53,782 @@ div, header, nav, ul, li, footer {
     left: -25px;
   }
 }
-
 .logo-show {
   position: relative;
   overflow: hidden;
 }
-
 .logo-shine {
   position: absolute;
   left: -25px;
   background-color: rgba(255, 255, 255, 0.35);
-  -webkit-transform: skewX(-30deg);
-  -moz-transform: skewX(-30deg);
-  -ms-transform: skewX(-30deg);
-  -o-transform: skewX(-30deg);
   transform: skewX(-30deg);
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out 0s;
   width: 25px;
   height: 81.7667px;
 }
-
 .shine-animation {
-  animation: shine 0.8s 2s 1 backwards;
+  animation: 0.8s ease 2s 1 normal backwards running shine;
 }
-
 .socials a {
-  color: #3b0b11;
+  color: rgb(59, 11, 17);
 }
-
-/* End of email signature styles */
-
 h1 {
-    font-size: 53px;
-    line-height: 120%;
+  font-size: 53px;
+  line-height: 120%;
 }
-
 input {
-    border-color: black;
-    border-style: solid;
+  border-color: black;
+  border-style: solid;
 }
-
 .input-active {
-    border-width: medium;
-    border-color: var(--scroll-shadow-colour);
+  border-width: medium;
+  border-color: var(--scroll-shadow-colour);
 }
-
-header, footer {
-    width: 100vw;
+header,
+footer {
+  width: 100vw;
 }
-
 header {
-    background-color: var(--dark-brown);
-    height: 294px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  background-color: var(--dark-brown);
+  height: 294px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
 header .logo-container {
   display: flex;
   justify-content: center;
   margin-top: 83px;
 }
-
 header .logo-container img {
   width: 116px;
   align-self: stretch;
 }
-
 ul {
-  margin: 13px 24px 0 0;
+  margin: 13px 24px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 48px;
 }
-
 ul li {
   list-style: none;
   margin-left: 24px;
 }
-
 ul li a {
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
   line-height: 28px;
   color: white;
-  transition: color 0.25s ease-in;
+  transition: color 0.25s ease-in 0s;
 }
-
 ul li a:hover {
-    color: var(--highlighted);
+  color: var(--highlighted);
 }
-
 main {
-    margin-top: 73px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
+  margin-top: 73px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
-
 main .text-container {
-    width: 80%;
-    padding: auto 10px auto 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-
-main .text-container > h1, small {
-    color: var(--dark-brown);
+main .text-container > h1,
+small {
+  color: var(--dark-brown);
 }
-
 main small {
-    font-size: 18px;
-    margin-top: 12px;
+  font-size: 18px;
+  margin-top: 12px;
 }
-
 main .email-app-container {
-    margin: 122px auto 0 auto;
-    width: 658px;
-    height: 210px;
-    background-color: var(--light-grey);
+  margin: 122px auto 0px;
+  width: 658px;
+  height: 210px;
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .email-app-container > small {
+  color: black;
+  text-align: center;
+}
+main .email-app-container .clients-container {
+  display: grid;
+  grid-template: "apple" 1fr "exchange" 1fr / 1fr 1fr 1fr 1fr;
+  gap: 9px;
+  margin-top: 9px;
+}
+main .email-app-container .clients-container .email-client {
+  width: 138px;
+  height: 60px;
+  background-color: white;
+  cursor: pointer;
+}
+.clicked {
+  border-width: thin;
+  border-color: black;
+  border-style: solid;
+}
+main .email-app-container .clients-container .email-client .icon-container {
+  display: flex;
+  position: relative;
+}
+main .email-app-container .clients-container .email-client img {
+  width: 30px;
+  margin: 5px auto 0px;
+}
+main .email-app-container .clients-container .email-client h5 {
+  font-size: 12px;
+  text-align: center;
+}
+main .email-app-container .clients-container .email-client:first-of-type {
+  grid-area: outlook / outlook / outlook / outlook;
+}
+main .email-app-container .clients-container .email-client:nth-of-type(2) {
+  grid-area: office / office / office / office;
+}
+main .email-app-container .clients-container .email-client:nth-of-type(3) {
+  grid-area: apple / apple / apple / apple;
+}
+main .email-app-container .clients-container .email-client:nth-of-type(4) {
+  grid-area: gmail / gmail / gmail / gmail;
+}
+main .email-app-container .clients-container .email-client:nth-of-type(5) {
+  grid-area: exchange / exchange / exchange / exchange;
+}
+main .email-app-container .clients-container .email-client:last-of-type {
+  grid-area: thunder / thunder / thunder / thunder;
+}
+main .form-and-signature {
+  margin-top: 92px;
+  padding-bottom: 158px;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+main .form-and-signature form label,
+.input-container {
+  display: flex;
+}
+main .form-and-signature form label {
+  align-self: center;
+  margin-right: 0px;
+  flex-basis: 37%;
+  display: flex;
+}
+main .form-and-signature form span {
+  margin-left: 5px;
+  font-weight: bold;
+}
+main .form-and-signature form .input-container {
+  flex-basis: 72%;
+  padding: 0px;
+  max-width: 100%;
+  width: 31%;
+}
+main .form-and-signature form .input-container input {
+  min-width: 295px;
+  border-radius: 4px;
+  text-indent: 20px;
+  font-weight: var(--medium-font);
+  font-size: 18px;
+}
+main .form-and-signature form {
+  min-width: 467px;
+  margin: 78px 0px 0px 9.23611vw;
+  transition: all 0s ease-in-out 0s;
+}
+main .form-and-signature form .ico-label-input {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  min-width: 467px;
+  margin-bottom: 38px;
+}
+main .form-and-signature .browser-window {
+  width: 693px;
+  height: 702px;
+  margin-left: 13.4028vw;
+  background: url("../img/Device.svg") 0% 0% / cover;
+  padding: 60px 0px 0px 30px;
+  border-radius: 21.1px;
+  box-shadow: 19px 37px 74px 25px var(--shadow-colour);
+  transition: all 0s ease-in-out 0s;
+}
+main .form-and-signature .browser-window .email-draft {
+  font-size: 18px;
+  font-weight: var(--medium-font);
+  max-width: 468px;
+}
+.copy-button {
+  margin: 0px auto 145px;
+  display: none;
+  justify-content: center;
+}
+main .modals {
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  left: 0px;
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: flex !important;
+}
+main .modals .modal {
+  position: fixed;
+  z-index: 1010;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: antiquewhite;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--dark-brown);
+  height: 400px;
+  max-height: 100%;
+  width: 600px;
+  max-width: 100%;
+}
+main .modals .modal .modal-contents {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 20px 50px 20px 20px;
+  font-size: 1.5em;
+}
+main .modals .modal .modal-contents .list-container {
+  font-size: 0.7em;
+  height: 68%;
+  overflow: auto;
+}
+main .modals .modal .modal-contents ol {
+  margin-left: 6%;
+}
+.button {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  border-color: var(--dark-brown);
+  width: 200px;
+  max-width: 100%;
+  height: 45px;
+  cursor: pointer;
+}
+main .modals .modal .modal-contents .button {
+  position: absolute;
+  bottom: 5%;
+  right: 8.25%;
+  margin-top: 3%;
+}
+main .modals .modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(212, 201, 201, 0.35);
+}
+footer {
+  display: flex;
+  justify-content: center;
+  min-height: 257px;
+  border-top: 2px solid black;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+footer .footer-content-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 36px 0px 64px;
+  height: 147px;
+  width: 1216px;
+}
+footer .footer-content-container div:first-of-type {
+  width: 243px;
+}
+footer .footer-content-container div:first-of-type img {
+  width: 80px;
+  height: 74px;
+}
+footer .footer-content-container div:first-of-type h6 {
+  font-weight: initial;
+  font-size: 14px;
+}
+footer .footer-content-container div:nth-of-type(2) {
+  width: 395px;
+  height: 50px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+footer .footer-content-container div:nth-of-type(2) form {
+  display: flex;
+  position: relative;
+}
+footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
+  width: 315px;
+  border-radius: 4px;
+  text-indent: 20px;
+  font-weight: var(--medium-font);
+  font-size: 18px;
+}
+footer .footer-content-container div:nth-of-type(2) form label {
+  background-color: white;
+  color: var(--dark-brown);
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  width: 82px;
+  height: 21px;
+  position: absolute;
+  left: 20px;
+  top: -10px;
+}
+footer .footer-content-container div:nth-of-type(2) form input[type="submit"] {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  border-color: var(--dark-brown);
+  width: 80px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+footer .footer-content-container div:last-of-type {
+  align-self: center;
+  height: 28px;
+  width: 196px;
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer-content-container div:last-of-type a {
+  display: flex;
+}
+footer .footer-content-container div:last-of-type a img {
+  width: 24px;
+}
+@media (max-width: 1330px) {
+  main .form-and-signature form {
+    margin-left: 50px;
+    max-width: 100%;
+  }
+  main .form-and-signature .browser-window {
+    margin-left: 50px;
+    max-width: 100%;
+    width: 533px;
+  }
+  footer .footer-content-container {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 1078px) {
+  main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-main .email-app-container > small {
-    color: black;
+  }
+  main .form-and-signature {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 160px;
+  }
+  main .form-and-signature form {
+    margin: 0px;
+  }
+  main .form-and-signature .browser-window {
+    margin-top: 50px;
+    height: 696px;
+  }
+  footer {
+    min-height: 400px;
+  }
+  footer .footer-content-container {
+    margin: 80px auto 90px;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-content-container div {
+    margin-top: 30px;
+  }
+  footer .footer-content-container div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-}
-
-main .email-app-container .clients-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "outlook office apple gmail"
-    ". exchange thunder ."; /* the dot instructs css to leave the cell empty*/
-    grid-gap: 9px;
-    margin-top: 9px;
-}
-
-main .email-app-container .clients-container .email-client {
-    width: 138px;
-    height: 60px;
-    background-color: white;
-    cursor: pointer;
-}
-
-/* Styles for when the box with the email client logo is clicked. */
-.clicked {
-    border-width: thin;
-    border-color: black;
-    border-style: solid; 
-}
-
-main .email-app-container .clients-container .email-client .icon-container {
-    display: flex;
-    position: relative;
-}
-
-main .email-app-container .clients-container .email-client img {
-    width: 30px;
-    margin: 5px auto 0px auto;
-}
-
-main .email-app-container .clients-container .email-client h5 {
-    font-size: 12px;
-    text-align: center;
-}
-
-main .email-app-container .clients-container .email-client:first-of-type {
-    grid-area: outlook;
-}
-
-main .email-app-container .clients-container .email-client:nth-of-type(2) {
-    grid-area: office;
-}
-
-main .email-app-container .clients-container .email-client:nth-of-type(3) {
-    grid-area: apple;
-}
-
-main .email-app-container .clients-container .email-client:nth-of-type(4) {
-    grid-area: gmail;
-}
-
-main .email-app-container .clients-container .email-client:nth-of-type(5) {
-    grid-area: exchange;
-}
-
-main .email-app-container .clients-container .email-client:last-of-type {
-    grid-area: thunder;
-}
-
-main .form-and-signature {
-    margin-top: 92px;
-    padding-bottom: 158px;
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-}
-
-main .form-and-signature form label, .input-container {
-    display: flex;
-}
-
-main .form-and-signature form label {
-    align-self: center;
-    margin-right: 0px;
-    flex-basis: 37%;
-    display: flex;
-    
-}
-
-main .form-and-signature form span {
-    margin-left: 5px;
-    font-weight: bold;
-}
-
-main .form-and-signature form .input-container {
-    flex-basis: 72%;
-    padding: 0px;
-    max-width: 100%;
-    width: 31%;
-}
-
-main .form-and-signature form .input-container input {
-    min-width: 295px;
-    border-radius: 4px;
-    text-indent: 20px;
-    font-weight: var(--medium-font);
-    font-size: 18px;
-}
-
-main .form-and-signature form {
-    min-width: 467px;
-    margin: 78px 0px 0px 9.236111111vw;
-    transition: all ease-in-out;
-}
-
-main .form-and-signature form .ico-label-input {
-    display: flex;
-    justify-content: space-around;
+  }
+  footer .footer-content-container div:first-of-type img {
+    margin-top: 50px;
+  }
+  footer .footer-content-container div:first-of-type h6 {
+    margin-top: 15px;
+  }
+  footer .footer-content-container div:nth-of-type(2) form {
     height: 50px;
-    min-width: 467px;
-    margin-bottom: 38px;
+  }
 }
-
-main .form-and-signature .browser-window {
-    width: 693px;
-    height: 702px;
-    margin-left: 13.402777778vw;
-    background: url("../img/Device.svg");
-    background-size: cover;
-    padding: 60px 0px 0px 30px;
-    border-radius: 21.1px;
-    box-shadow: 19px 37px 74px 25px var(--shadow-colour);
-    transition: all ease-in-out;
+@media (max-width: 768px) {
+  .button {
+    transform: scale(0.65);
+  }
+  main .modals .modal .modal-contents .button {
+    right: -1.75%;
+  }
 }
-
-main .form-and-signature .browser-window .email-draft {
-    font-size: 18px;
-    font-weight: var(--medium-font);
-    max-width: 468px;
+@media (max-width: 743px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ul {
+    margin: auto;
+  }
+  header {
+    height: 107px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  header .logo-container {
+    margin: auto 0px;
+    justify-self: flex-start;
+  }
+  header .logo-container img {
+    width: 63px;
+  }
+  main .text-container > h1 {
+    width: 100%;
+    font-size: 32px;
+    margin: auto;
+  }
+  main h2 {
+    font-size: 30px;
+  }
+  main > small {
+    width: 86vw;
+    text-align: center;
+    margin: 12px auto 0px;
+  }
+  main .email-app-container {
+    margin-top: 40px;
+    width: 83vw;
+  }
+  main .email-app-container .clients-container .email-client {
+    width: 18vw;
+    min-height: 70px;
+  }
+  main .form-and-signature {
+    padding-bottom: 102px;
+  }
+  main .form-and-signature .browser-window {
+    width: 79%;
+    min-width: 479px;
+  }
+  .copy-button {
+    margin: 0px auto 76px;
+  }
 }
-
-.copy-button {
-    margin: 0px auto 145px auto;
-    display: none;
-    justify-content: center;
-}
-
-main .modals {
-    position: fixed;
-    z-index: 999;
+@media (max-width: 511px) {
+  main .text-container {
+    width: 71%;
+  }
+  main small {
+    font-size: 13px;
+  }
+  main .modals .modal {
+    max-width: 92%;
+    height: 276px;
+  }
+  main .modals .modal .modal-contents {
+    position: absolute;
     top: 0px;
     left: 0px;
-    display: none;
     width: 100%;
-    height: 100%;
+    height: 102%;
+    padding: 20px 50px 20px 20px;
+    font-size: 1.5em;
+  }
+  main .modals .modal .modal-contents .list-container {
+    width: 106%;
+    height: 61%;
+  }
+  main .modals .modal .modal-contents ol {
+    font-size: 14px;
+  }
+  main .form-and-signature {
+    padding-bottom: 1vh;
+    display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.hide {
-    display: none !important;
-}
-
-.show {
-    display: flex !important;
-}
-
-main .modals .modal {
-    position: fixed;
-    z-index: 1010;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: antiquewhite;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: thin;
-    border-color: var(--dark-brown);
-    height: 400px;
-    max-height: 100%;
-    width:600px;
+    margin: 92px auto auto;
+    width: 100vw;
+  }
+  main .form-and-signature form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     max-width: 100%;
-}
-
-main .modals .modal .modal-contents {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px 50px 20px 20px;
-    
-    font-size: 1.5em;
-    
-}
-
-main .modals .modal .modal-contents .list-container {
-    font-size: 0.7em;
-    height: 68%;
-    overflow: auto;
-}
-
-main .modals .modal .modal-contents ol {
-    margin-left: 6%;
-}
-
-.button {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
-    background-color: var(--dark-brown);
-    border-radius: 4px;
-    border-color: var(--dark-brown);
-    width: 200px;
+    width: 93%;
+    margin: 0px auto;
+  }
+  main .form-and-signature form label .icon-container {
+    display: flex;
+  }
+  main .form-and-signature form .ico-label-input {
+    justify-content: flex-end;
+    height: 47px;
+    margin: 0px 0px 12px;
     max-width: 100%;
-    height: 45px;
-    cursor: pointer;
-}
-
-main .modals .modal .modal-contents .button {
-    position: absolute;
-    bottom: 5%;
-    right: 8.25%;
-    margin-top: 3%;
-}
-
-main .modals .modal-overlay {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* backdrop-filter: blur(10px); */
-    background-color: #d4c9c959;
-} 
-
-footer {
-    display: flex;
-    justify-content: center;
-    min-height: 257px;
-    border-top: black;
-    border-width: 2px;
-    border-top-style: solid;
-}
-
-footer .footer-content-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 36px 0px 64px 0px;
-    height: 147px;
-    width: 1216px;
-}
-
-footer .footer-content-container div:first-of-type {
-    width: 243px;
-}
-
-footer .footer-content-container div:first-of-type img {
-    width: 80px;
-    height: 74px;
-}
-
-footer .footer-content-container div:first-of-type h6 {
-    font-weight: initial;
-    font-size: 14px;
-}
-
-footer .footer-content-container div:nth-of-type(2) {
-    width: 395px;
-    height: 50px;
+    padding: 0px;
+    min-width: 0px;
+    width: 87%;
+  }
+  main .form-and-signature form span {
+    font-size: 12px;
+  }
+  main .form-and-signature form label {
+    align-items: center;
+  }
+  main .form-and-signature form .input-container input {
+    text-indent: 14px;
+    font-size: 12px;
+    height: 47px;
+    min-width: 0px;
+    max-width: 100%;
+    width: 66%;
     align-self: center;
-    display: flex;
-    justify-content: center;
-}
-
-footer .footer-content-container div:nth-of-type(2) form {
-    display: flex;
-    position: relative;
-}
-
-footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
-    width: 315px;
-    border-radius: 4px;
-    text-indent: 20px;
-    font-weight: var(--medium-font);
-    font-size: 18px;
-}
-
-footer .footer-content-container div:nth-of-type(2) form label {
-    background-color: white;
-    color: var(--dark-brown);
-    font-weight: bold;
-    text-align: center;
+  }
+  main .form-and-signature .browser-window {
+    height: 600px;
+    transform: scale(0.875);
+    box-shadow: 0px 23px 22px 2px var(--shadow-colour);
+    margin: 40px auto auto;
+  }
+  main .form-and-signature .browser-window .email-draft {
+    font-size: 12px;
+    width: 430px;
+  }
+  .button {
     font-size: 14px;
-    width: 82px;
-    height: 21px;
-    position: absolute;
-    left: 20px;
-    top: -10px;
-}
-
-footer .footer-content-container div:nth-of-type(2) form input[type="submit"] {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
-    background-color: var(--dark-brown);
-    border-radius: 4px;
-    border-color: var(--dark-brown);
-    width: 80px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-footer .footer-content-container div:last-of-type {
+  }
+  footer .footer-content-container div {
+    margin-top: 45px;
+  }
+  footer .footer-content-container div:first-of-type h6 {
+    margin-top: 19px;
+    font-size: 10px;
+  }
+  footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
+    text-indent: 14px;
+    font-size: 14px;
+    height: 47px;
+    width: 186px;
     align-self: center;
-    height: 28px;
-    width: 196px;
-    display: flex;
-    justify-content: space-around;
+  }
+  footer
+    .footer-content-container
+    div:nth-of-type(2)
+    form
+    input[type="submit"] {
+    height: 48px;
+    font-size: 14px;
+  }
+  footer .footer-content-container div:nth-of-type(2) form label {
+    top: -6px;
+    font-size: 12px;
+    width: 70px;
+  }
+  main .email-app-container .clients-container .email-client h6 {
+    font-size: 10px;
+  }
 }
-
-footer .footer-content-container div:last-of-type a {
-    display: flex;
-}
-
-footer .footer-content-container div:last-of-type a img {
-    width: 24px;
-}
-
-@media (max-width: 1330px) {
-    main .form-and-signature form {
-        margin-left: 50px;
-        max-width: 100%;
-    }
-
-    main .form-and-signature .browser-window {
-        margin-left: 50px;
-        max-width: 100%;
-        width: 533px;
-    }
-
-    footer .footer-content-container {
-        justify-content: space-around;
-    }
-}
-
-@media (max-width: 1078px) {
-    main {
-      display: flex;
-      flex-direction:column;
-      align-items: center;
-    }
-    
-    main .form-and-signature {
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 160px;
-    }
-
-    main .form-and-signature form {
-        margin: 0px;
-    }
-
-    main .form-and-signature .browser-window {
-        margin-top: 50px;
-        height: 696px;
-    }
-    
-    footer {
-        min-height: 400px;
-    }
-
-    footer .footer-content-container {
-        margin: 80px auto 90px auto;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer .footer-content-container div {
-        margin-top: 30px;
-    }
-
-    footer .footer-content-container div:first-of-type {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    footer .footer-content-container div:first-of-type img {
-        margin-top: 50px;
-    }
-
-    footer .footer-content-container div:first-of-type h6 {
-        margin-top: 15px;
-    }
-
-    footer .footer-content-container div:nth-of-type(2) form {
-        height: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .button {
-        transform: scale(0.65);
-    }
-
-    main .modals .modal .modal-contents .button {
-        right: -1.75%;
-    }
-}
-
-@media (max-width: 743px) {
-    ::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    ul {
-        margin: auto;
-    }
-
-    header {
-        height: 107px;
-        flex-direction: row;
-        justify-content: space-around; 
-    }
-
-    header .logo-container {
-        margin: auto 0px auto 0px;
-        justify-self: flex-start;
-    }
-
-    header .logo-container img {
-        width: 63px;
-    }
-
-    main .text-container > h1 {
-        width: 100%;
-        font-size: 32px;
-        margin: auto;
-    }
-
-    main h2 {
-        font-size: 30px;
-    }
-
-    main > small {
-        width: 86vw;
-        text-align: center;
-        margin: 12px auto 0px auto;
-    }
-
-    main .email-app-container {
-        margin-top: 40px;
-        width: 83vw;
-    }
-    
-    main .email-app-container .clients-container .email-client {
-        width: 18vw;
-        min-height: 70px;
-    }
-
-    main .form-and-signature {
-        padding-bottom: 102px;
-    }
-
-    main .form-and-signature .browser-window {
-        width: 79%;
-        min-width: 479px;
-    }
-
-    .copy-button {
-        margin: 0px auto 76px auto;
-    }
-}
-
-@media (max-width: 511px) { 
-    main .text-container{
-      width: 71%;
-    }
-    
-    main small {
-        font-size: 13px;
-    }
-    
-    main .modals .modal {
-        max-width: 92%;
-        height: 276px;
-    }
-
-    main .modals .modal .modal-contents {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 102%;
-      padding: 20px 50px 20px 20px;
-      font-size: 1.5em;
-    }
-
-    main .modals .modal .modal-contents .list-container {
-        width: 106%;
-        height: 61%;
-    }
-
-    main .modals .modal .modal-contents ol{
-        font-size: 14px
-    }
-
-    main .form-and-signature {
-      padding-bottom: 1vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 92px auto auto auto;
-      width: 100vw;
-    }
-
-    main .form-and-signature form {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        max-width: 100%;
-        width: 93%;
-        margin: 0px auto 0px auto;
-    }
-
-    main .form-and-signature form label .icon-container {
-        display:flex;
-    }
-
-    main .form-and-signature form .ico-label-input {
-        justify-content: flex-end;
-        height: 47px;
-        margin: 0px 0px 12px 0px;
-        max-width: 100%;
-        padding: 0px;
-        min-width: 0px;
-        width: 87%;
-    }
-
-    main .form-and-signature form span {
-        font-size: 12px;
-    }
-
-    main .form-and-signature form label {
-      align-items: center;
-    }
-
-    main .form-and-signature form .input-container input {
-        text-indent: 14px;
-        font-size: 12px;
-        height: 47px;
-        min-width: 0px;
-        max-width: 100%;
-        width: 66%;
-        align-self: center;
-    }
-
-    main .form-and-signature .browser-window {
-        height: 600px;
-        transform: scale(0.875);
-        box-shadow: 0px 23px 22px 2px var(--shadow-colour);
-        margin: 40px auto auto auto;
-    }
-
-    main .form-and-signature .browser-window .email-draft {
-        font-size: 12px;
-        width: 430px;
-    }
-
-    .button {
-        font-size: 14px;
-    }
-
-    footer .footer-content-container div {
-        margin-top: 45px;
-    }
-
-    footer .footer-content-container div:first-of-type h6 {
-        margin-top: 19px;
-        font-size: 10px;
-    }
-
-    footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
-        text-indent: 14px;
-        font-size: 14px;
-        height: 47px;
-        width: 186px;
-        align-self: center;
-    }
-
-    footer .footer-content-container div:nth-of-type(2) form input[type="submit"] {
-        height: 48px;
-        font-size: 14px;
-    }
-
-    footer .footer-content-container div:nth-of-type(2) form label {
-        top: -6px;
-        font-size: 12px;
-        width: 70px;
-    }
-
-    main .email-app-container .clients-container .email-client h6 {
-        font-size: 10px;
-    }
-}
-
 @media (max-width: 482px) {
-    main .form-and-signature .browser-window {
-        display: flex;
-        transform: scale(0.8);
-        align-self: center;
-        align-items: center;
-        padding-top: 3%;
-        box-shadow: 0px 15px 56px -3px var(--shadow-colour); */
-        margin: -29px auto auto auto;
-    }
-
-    main .modals .modal {
-      max-width: 85%;
-    }
-  
-    main .modals .modal-overlay {
-      width: 100%;
-    }
+  main .form-and-signature .browser-window {
+    display: flex;
+    transform: scale(0.8);
+    align-self: center;
+    align-items: center;
+    padding-top: 3%;
+    box-shadow: 0px 15px 56px -3px var(--shadow-colour);
+  }
+  main .modals .modal {
+    max-width: 85%;
+  }
+  main .modals .modal-overlay {
+    width: 100%;
+  }
 }
-
 @media (max-width: 464px) {
-  main .modals .modal {left: 44%;max-width: 75%;}
+  main .modals .modal {
+    left: 44%;
+    max-width: 75%;
+  }
 }
-
 @media (max-width: 446px) {
   main .form-and-signature .browser-window {
     transform: scale(0.7);
     margin: 0px;
   }
 }
-
 @media (max-width: 414px) {
-    main .modals .modal {
+  main .modals .modal {
     width: 79%;
-    height: 28%;
+    height: 268px;
     left: 41%;
-    }
-
-    main .modals .modal .modal-contents .list-container {
+  }
+  main .modals .modal .modal-contents .list-container {
     height: 61%;
-}
-  
-    main .modals .modal .modal-contents ol {
+  }
+  main .modals .modal .modal-contents ol {
     font-size: 12px;
+  }
+  main .form-and-signature .browser-window {
+    transform: scale(0.725);
+  }
+  main .text-container > h1 {
+    font-size: 28px;
+    display: grid;
+  }
+  main > small {
+    transform: translateX(-0.63%);
+  }
+  main h2 {
+    font-size: 26px;
+  }
+  main small {
+    font-size: 9px;
+  }
+  main .email-app-container .clients-container .email-client h5 {
+    font-size: 10px;
+  }
+  main .form-and-signature form {
+    align-items: center;
+    max-width: 150%;
+    width: 72%;
+  }
+  main .form-and-signature form .ico-label-input {
+    width: 75%;
+    justify-content: flex-start;
+  }
+  main .form-and-signature form .input-container {
+    width: 34%;
+    min-width: 0px;
+  }
+  main .form-and-signature form .input-container input {
+    text-indent: 9px;
+    width: 75%;
+  }
 }
-
-    main .form-and-signature .browser-window {
-        transform: scale(0.725);
-    }
-
-    main .text-container > h1 {
-        font-size: 28px;
-        display: grid;
-    }
-
-    main > small {
-        transform: translateX(-0.63%);
-    }
-
-    main h2 {
-        font-size: 26px;
-    }
-
-    main small {
-        font-size: 9px;
-    }
-
-    main .email-app-container .clients-container .email-client h5 {
-        font-size: 10px;
-    }
-
-    main .form-and-signature form {
-        align-items: center;
-        max-width: 150%;
-        width: 72%;
-    }
-
-    main .form-and-signature form .ico-label-input {
-      width: 75%;
-      justify-content: flex-start;
-    }
-
-    main .form-and-signature form .input-container {
-        width: 34%;
-        min-width: 0px;
-    }
-
-    main .form-and-signature form .input-container input {
-        text-indent: 9px;
-        width: 75%;
-    }
-}
-
 @media (max-width: 375px) {
-    ul li a{
-        font-size: 14px;
-    }
-
-    main .form-and-signature {
-      width: 100vw;
-    }
-
-    main .form-and-signature form .ico-label-input {
-      width: 81%;
-      justify-content: center;
-    }
-
-    main .form-and-signature form label {
-      flex-basis: 45%;
-    }
-
-    main .modals .modal .modal-contents .list-container {
-        width: 109%; 
-    }
-
-    header .logo-container {
-        margin: auto 0px auto 3vw;
-    }
-
-    nav {
-        transform: translateX(-5vw);
-    }
-
-    main > small {
-        transform: translateX(-0.63%);
-    }
-    
-    main .form-and-signature form {
-        align-items: center;
-        min-width: 0px;
-        width: 115%;
-    }
-
-    main .form-and-signature .browser-window {
-        transform: scale(0.625);
-    }
+  ul li a {
+    font-size: 14px;
+  }
+  main .form-and-signature {
+    width: 100vw;
+  }
+  main .form-and-signature form .ico-label-input {
+    width: 81%;
+    justify-content: center;
+  }
+  main .form-and-signature form label {
+    flex-basis: 45%;
+  }
+  main .modals .modal .modal-contents .list-container {
+    width: 109%;
+  }
+  header .logo-container {
+    margin: auto 0px auto 3vw;
+  }
+  nav {
+    transform: translateX(-5vw);
+  }
+  main > small {
+    transform: translateX(-0.63%);
+  }
+  main .form-and-signature form {
+    align-items: center;
+    min-width: 0px;
+    width: 115%;
+  }
+  main .form-and-signature .browser-window {
+    transform: scale(0.625);
+  }
 }
-
 @media (max-width: 325px) {
-    ul li a{
-        font-size: 14px;
-    }
-
-    .button {
-        height: 41px;
-    }
-
-    main .email-app-container .clients-container .email-client h5 {
-        font-size: 7px;
-        margin-top: 10px;
-    }
-
-    main .form-and-signature {
-        margin-top: 55px;
-    }
-
-    main .form-and-signature form span {
-        font-size: 12px;
-    }
-
-    main .form-and-signature form .input-container input {
-        font-size: 12px;
-        height: 41px;
-    }
-
-    main .form-and-signature form label img {
-        width: 17px;
-    }
-
-    main .form-and-signature .browser-window {
-        transform: scale(0.625);
-    }
-
-    footer .footer-content-container div:first-of-type h6 {
-        font-size: 8px;
-    }
-
-    footer .footer-content-container div:nth-of-type(2) form {
-        height: 41px;
-    }
-
-    footer .footer-content-container div:nth-of-type(2) form label {
-        height: 7px;
-        width: 55px;
-        font-size: 9px;
-        top: -4px;
-    }
-
-    footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
-        text-indent: 9px;
-        font-size: 12px;
-        min-width: 174px;
-        height: 41px;
-    }
-
-    footer .footer-content-container div:nth-of-type(2) form input[type="submit"] {
-        height: 41px;
-    }
+  ul li a {
+    font-size: 14px;
+  }
+  .button {
+    height: 41px;
+  }
+  main .email-app-container .clients-container .email-client h5 {
+    font-size: 7px;
+    margin-top: 10px;
+  }
+  main .form-and-signature {
+    margin-top: 55px;
+  }
+  main .form-and-signature form span {
+    font-size: 12px;
+  }
+  main .form-and-signature form .input-container input {
+    font-size: 12px;
+    height: 41px;
+  }
+  main .form-and-signature form label img {
+    width: 17px;
+  }
+  main .form-and-signature .browser-window {
+    transform: scale(0.625);
+  }
+  footer .footer-content-container div:first-of-type h6 {
+    font-size: 8px;
+  }
+  footer .footer-content-container div:nth-of-type(2) form {
+    height: 41px;
+  }
+  footer .footer-content-container div:nth-of-type(2) form label {
+    height: 7px;
+    width: 55px;
+    font-size: 9px;
+    top: -4px;
+  }
+  footer .footer-content-container div:nth-of-type(2) form input[type="email"] {
+    text-indent: 9px;
+    font-size: 12px;
+    min-width: 174px;
+    height: 41px;
+  }
+  footer
+    .footer-content-container
+    div:nth-of-type(2)
+    form
+    input[type="submit"] {
+    height: 41px;
+  }
 }
