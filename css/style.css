@@ -178,8 +178,6 @@ main .text-container {
 }
 
 main .text-container > h1, small {
-    /* display: flex; */
-    /* justify-content: center; */
     color: var(--dark-brown);
 }
 
@@ -284,7 +282,7 @@ main .form-and-signature form label {
     margin-right: 0px;
     flex-basis: 37%;
     display: flex;
-    /* align-items: center; */
+    
 }
 
 main .form-and-signature form span {
@@ -293,7 +291,6 @@ main .form-and-signature form span {
 }
 
 main .form-and-signature form .input-container {
-    /* margin-left: 2vw; */
     flex-basis: 72%;
     padding: 0px;
     max-width: 100%;
@@ -391,7 +388,7 @@ main .modals .modal .modal-contents {
     padding: 20px 50px 20px 20px;
     
     font-size: 1.5em;
-    /* text-indent: 0.83em; */
+    
 }
 
 main .modals .modal .modal-contents .list-container {
@@ -601,10 +598,6 @@ footer .footer-content-container div:last-of-type a img {
     footer .footer-content-container div:nth-of-type(2) form {
         height: 50px;
     }
-
-    /* html {
-        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
-    } */
 }
 
 @media (max-width: 768px) {
@@ -625,10 +618,6 @@ footer .footer-content-container div:last-of-type a img {
     ul {
         margin: auto;
     }
-
-    /* ul li a {
-        font-size: 14px;
-    } */
 
     header {
         height: 107px;
@@ -666,7 +655,6 @@ footer .footer-content-container div:last-of-type a img {
         width: 83vw;
     }
     
-
     main .email-app-container .clients-container .email-client {
         width: 18vw;
         min-height: 70px;
@@ -679,29 +667,12 @@ footer .footer-content-container div:last-of-type a img {
     main .form-and-signature .browser-window {
         width: 79%;
         min-width: 479px;
-        /* transform: translateX(-3.5599999999999996vw); */
     }
 
     .copy-button {
         margin: 0px auto 76px auto;
     }
 }
-
-/* @media (max-width: 653px) {
-    main .text-container { 
-        justify-content: center;
-        width: 70vw;
-    }
-
-    main .text-container > h1 {
-        text-align: right;
-        align-self: center;
-    }
-    
-    main .text-container small {
-        width: 90%;
-    }
-} */
 
 @media (max-width: 511px) { 
     main .text-container{
@@ -714,7 +685,6 @@ footer .footer-content-container div:last-of-type a img {
     
     main .modals .modal {
         max-width: 92%;
-        /* transform: translate(-53%, -50%); */
         height: 276px;
     }
 
@@ -731,7 +701,6 @@ footer .footer-content-container div:last-of-type a img {
     main .modals .modal .modal-contents .list-container {
         width: 106%;
         height: 61%;
-        /* background: aliceblue; */
     }
 
     main .modals .modal .modal-contents ol{
@@ -750,15 +719,10 @@ footer .footer-content-container div:last-of-type a img {
     main .form-and-signature form {
         display: flex;
         flex-direction: column;
-        /* align-self: center; */
         align-items: flex-end;
         max-width: 100%;
         width: 93%;
-        /* display: flex;
-        flex-direction: column;
-        align-items: center; */
         margin: 0px auto 0px auto;
-        /* transform: translateX(7%); */
     }
 
     main .form-and-signature form label .icon-container {
@@ -773,13 +737,7 @@ footer .footer-content-container div:last-of-type a img {
         padding: 0px;
         min-width: 0px;
         width: 87%;
-        /* flex-basis: 70%; */
     }
-
-    /* main .form-and-signature form label {
-        margin-left: auto;
-
-    } */
 
     main .form-and-signature form span {
         font-size: 12px;
@@ -797,11 +755,9 @@ footer .footer-content-container div:last-of-type a img {
         max-width: 100%;
         width: 66%;
         align-self: center;
-        /* transform: translateX(-45%); */
     }
 
     main .form-and-signature .browser-window {
-        /* right: 31px; */
         height: 600px;
         transform: scale(0.875);
         box-shadow: 0px 23px 22px 2px var(--shadow-colour);
@@ -812,10 +768,6 @@ footer .footer-content-container div:last-of-type a img {
         font-size: 12px;
         width: 430px;
     }
-
-    /* .modal {
-        font-size: ;
-    } */
 
     .button {
         font-size: 14px;
@@ -852,21 +804,9 @@ footer .footer-content-container div:last-of-type a img {
     main .email-app-container .clients-container .email-client h6 {
         font-size: 10px;
     }
-
-
 }
 
 @media (max-width: 482px) {
-    main .modals .modal {
-        /* left: 50%; */
-        /* max-width: 71%; */
-    }
-
-    main .text-container > h1 {
-        /* width: 339px; */
-        /* text-align: right; */
-    }
-
     main .form-and-signature .browser-window {
         display: flex;
         transform: scale(0.8);
@@ -879,11 +819,6 @@ footer .footer-content-container div:last-of-type a img {
 }
 
 @media (max-width: 446px) {
-  main .modals .modal {
-    /* left: 42%; */
-    /* max-width: 71%; */
-  }
-
   main .form-and-signature .browser-window {
     transform: scale(0.7);
     margin: 0px;
@@ -892,8 +827,6 @@ footer .footer-content-container div:last-of-type a img {
 
 @media (max-width: 414px) {
     main .modals .modal {
-        /* left: 39.8%; */
-        /* max-width: 71%; */
     }
 
     main .form-and-signature .browser-window {
@@ -902,9 +835,7 @@ footer .footer-content-container div:last-of-type a img {
 
     main .text-container > h1 {
         font-size: 28px;
-        /* text-align: center; */
         display: grid;
-        /* transform: translateX(0.08999999999999986vw); */
     }
 
     main > small {
@@ -924,9 +855,6 @@ footer .footer-content-container div:last-of-type a img {
     }
 
     main .form-and-signature form {
-        /* transform: translateX(10.899999999999999vw); */
-        /* display: flex; */
-        /* flex-direction: column; */
         align-items: center;
         max-width: 150%;
         width: 72%;
@@ -944,8 +872,6 @@ footer .footer-content-container div:last-of-type a img {
 
     main .form-and-signature form .input-container input {
         text-indent: 9px;
-        /* transform: translateX(-79%); */
-        /* min-width: 140px; */
         width: 75%;
     }
 }
@@ -972,11 +898,6 @@ footer .footer-content-container div:last-of-type a img {
         width: 109%; 
     }
 
-    main .modals .modal {
-        /* left: 38.55%; */
-        /* max-width: 66%; */
-    }
-
     header .logo-container {
         margin: auto 0px auto 3vw;
     }
@@ -985,23 +906,17 @@ footer .footer-content-container div:last-of-type a img {
         transform: translateX(-5vw);
     }
 
-    main .text-container > h1 {
-        /* transform: translateX(0.6600000000000001vw); */
-    }
-
     main > small {
         transform: translateX(-0.63%);
     }
     
     main .form-and-signature form {
-        /* transform: translateX(10.899999999999999vw); */
         align-items: center;
         min-width: 0px;
         width: 115%;
     }
 
     main .form-and-signature .browser-window {
-        /* transform: translateX(-11.68vw) scale(0.725); */
         transform: scale(0.625);
     }
 }
@@ -1030,13 +945,7 @@ footer .footer-content-container div:last-of-type a img {
 
     main .form-and-signature form .input-container input {
         font-size: 12px;
-        /* transform: translateX(-99%); */
-        /* min-width: 174px; */
         height: 41px;
-    }
-
-    main .form-and-signature form {
-        /* transform: translateX(3.8999999999999986vw); */
     }
 
     main .form-and-signature form label img {
