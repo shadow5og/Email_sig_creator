@@ -163,8 +163,12 @@ main .email-app-container > small {
 }
 main .email-app-container .clients-container {
   display: grid;
-  grid-template: "apple" 1fr "exchange" 1fr / 1fr 1fr 1fr 1fr;
-  gap: 9px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "outlook office apple gmail"
+    ". exchange thunder ."; /* the dot instructs css to leave the cell empty*/
+  grid-gap: 9px;
   margin-top: 9px;
 }
 main .email-app-container .clients-container .email-client {
@@ -191,22 +195,22 @@ main .email-app-container .clients-container .email-client h5 {
   text-align: center;
 }
 main .email-app-container .clients-container .email-client:first-of-type {
-  grid-area: outlook / outlook / outlook / outlook;
+  grid-area: outlook;
 }
 main .email-app-container .clients-container .email-client:nth-of-type(2) {
-  grid-area: office / office / office / office;
+  grid-area: office;
 }
 main .email-app-container .clients-container .email-client:nth-of-type(3) {
-  grid-area: apple / apple / apple / apple;
+  grid-area: apple;
 }
 main .email-app-container .clients-container .email-client:nth-of-type(4) {
-  grid-area: gmail / gmail / gmail / gmail;
+  grid-area: gmail;
 }
 main .email-app-container .clients-container .email-client:nth-of-type(5) {
-  grid-area: exchange / exchange / exchange / exchange;
+  grid-area: exchange;
 }
 main .email-app-container .clients-container .email-client:last-of-type {
-  grid-area: thunder / thunder / thunder / thunder;
+  grid-area: thunder;
 }
 main .form-and-signature {
   margin-top: 92px;
