@@ -426,6 +426,7 @@ main .modals .modal-overlay {
 
 .notifier {
   position: fixed;
+  width: 100vw;
   z-index: 1011;
   bottom: 0px;
   left: 0px;
@@ -695,6 +696,10 @@ footer .footer-content-container div:last-of-type a img {
     margin: 0px auto 76px;
   }
 
+  .notifier {
+    font-size: calc(1em - 4px);
+    padding: 2% 7%;
+}
 }
 
 @media (max-width: 511px) {
@@ -860,6 +865,10 @@ footer .footer-content-container div:last-of-type a img {
     width: 100%;
   }
 
+  .notifier {
+    font-size: calc(1em - 2px);
+    padding: 2% 7%;
+  }
 }
 
 @media (max-width: 464px) {
@@ -944,6 +953,10 @@ footer .footer-content-container div:last-of-type a img {
     height: 32px;
   }
 
+  .notifier {
+    font-size: calc(1em - 6px);
+    padding: 3% 7%;
+  }
 }
 
 @media (max-width: 375px) {
