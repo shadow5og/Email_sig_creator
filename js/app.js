@@ -18,6 +18,14 @@ let logoShineInterval = setInterval(() => {
   element.innerText = thisYear;
 })()
 
+// Removing the disclaimer
+let x = document.querySelector(".notifier-button"),
+    disclaimer = document.querySelector(".notifier");
+
+x.addEventListener("click", (e) => {
+  disclaimer.classList.toggle("hide");
+});
+
 //Copying the element to the clipboard.
 function CopyToClipboard(
   element = document.querySelector("#signaturePreview"),
@@ -167,6 +175,14 @@ function showModal(e) {
       <li>Paste the copied signature in the Edit signature section (Ctrl + V).</li>
       <li>Optional) Choose whether to insert the signature automatically for new emails and replies and forwards.</li>
       <li>Scroll down and click Save changes.</li>`;
+      break;
+    case "Windows Mail":
+      instructions = `<li>Open Mail App.</li>
+      <li>Click on Settings (gear symbol at the bottom left)</li>
+      <li>Go to Signature.</li>
+      <li>Type you preferable signature on the dialogue box and turn the Use signature On.</li>
+      <li>Click on the check box beside Apply to all accounts.</li>
+      <li>Open a new mail and check if the change reflects.</li>`;
       break;
     case "Exchange Server":
       instructions = `<li>Go to the Exchange admin center.</li>
