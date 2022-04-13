@@ -1,0 +1,6 @@
+<li>Open Mail App.</li>
+<li>Click on Settings (gear symbol at the bottom left)</li>
+<li>Go to Signature.</li>
+<li>Type you preferable signature on the dialogue box and turn the Use signature On.</li>
+<li>Click on the check box beside Apply to all accounts.</li>
+<li>Open a new mail and check if the change reflects.</li>
