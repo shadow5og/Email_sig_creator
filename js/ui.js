@@ -38,7 +38,7 @@ export default class UI {
       this.#logoShine.classList.add("shine-animation");
     }, 10000);
 
-    this.loadEvents(user, this.#oldClient);
+    this.loadEvents(user);
   }
 
   // Returns the input fields.
