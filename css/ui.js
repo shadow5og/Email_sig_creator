@@ -38,7 +38,7 @@ export default class UI {
       this.#logoShine.classList.add("shine-animation");
     }, 10000);
 
-    this.loadEvents(user);
+    this.loadEvents(user, this.#oldClient);
   }
 
   // Returns the input fields.
@@ -195,7 +195,7 @@ export default class UI {
         <li>Click View settings for this account under the Accounts section.</li>
         <li>Scroll down to Signature text and select the Use HTML checkbox.</li>
         <li>Paste the copied HTML code into the signature input field.</li>
-        <li>Click OK to confirm changes.</li>`;
+        <li>Click OK to confirm changes. Yeah Yeah!</li>`;
         break;
     }
 
@@ -205,60 +205,33 @@ export default class UI {
 
   // messing with the email boxes. I add toggle the border when it is clicked.
   changeEmailClient = (e) => {
-    let btn = document.querySelector("main .copy-button .button"),
-      target = e.target;
+    let btn = document.querySelector("main .copy-button .button");
+
+    if (this.#oldClient != null) {
+      this.#oldClient.classList.toggle("clicked");
+    }
+
+    let target = e.target;
 
     while (!target.classList.contains("email-client")) {
       target = target.parentElement;
     }
 
-    // try {
-    //   if (
-    //     this.#oldClient.children[1].innerText === target.children[1].innerText
-    //   ) {
-    //     target.classList.toggle("clicked");
-    //     console.log(this.#oldClient.children[1].innerText);
-    //   } else {
-    //   }
-    // } catch (e) {
-    //   console.log("Old Client does not exist yet:\n", e.message);
-    // }
-
-    if (!Boolean(this.#oldClient)) {
-      target.classList.toggle("clicked");
-    } else if (
-      this.#oldClient.children[1].innerText === target.children[1].innerText &&
-      target.classList.contains("clicked")
-    ) {
-      target.classList.toggle("clicked");
-    } else if (
-      this.#oldClient.children[1].innerText === target.children[1].innerText &&
-      !target.classList.contains("clicked")
-    ) {
-      target.classList.toggle("clicked");
-    } else {
-      target.classList.toggle("clicked");
-      this.#oldClient.classList.remove("clicked");
-    }
-
+    target.classList.toggle("clicked");
     this.#oldClient = target;
 
-    if (target.classList.contains("clicked")) {
-      let emailApp = target.children[1].innerText;
+    let emailApp = target.children[1].innerText;
 
-      if (!btn.parentElement.classList.contains("show")) {
-        btn.parentElement.classList.toggle("show");
-      }
-
-      btn.setAttribute("name", emailApp);
-
-      if (emailApp === "Exchange Server" || emailApp === "Thunderbird") {
-        btn.value = "Copy HTML";
-      } else {
-        btn.value = "Copy Signature";
-      }
-    } else {
+    if (!btn.parentElement.classList.contains("show")) {
       btn.parentElement.classList.toggle("show");
+    }
+
+    btn.setAttribute("name", emailApp);
+
+    if (emailApp === "Exchange Server" || emailApp === "Thunderbird") {
+      btn.value = "Copy HTML";
+    } else {
+      btn.value = "Copy Signature";
     }
   };
 
@@ -277,10 +250,11 @@ export default class UI {
 
       document.body.classList.toggle("no-scroll");
 
-      emailClient.classList.toggle("clicked");
-      this.#oldClient = null;
+      emailClient.style.borderStyle = "none";
 
       document.querySelector("main .copy-button").classList.toggle("show");
+
+      console.log(document.querySelector("main .copy-button .button"));
     });
 
     // Make the disclaimer disappear after clicking x.
