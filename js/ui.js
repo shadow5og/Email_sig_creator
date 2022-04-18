@@ -212,18 +212,6 @@ export default class UI {
       target = target.parentElement;
     }
 
-    // try {
-    //   if (
-    //     this.#oldClient.children[1].innerText === target.children[1].innerText
-    //   ) {
-    //     target.classList.toggle("clicked");
-    //     console.log(this.#oldClient.children[1].innerText);
-    //   } else {
-    //   }
-    // } catch (e) {
-    //   console.log("Old Client does not exist yet:\n", e.message);
-    // }
-
     if (!Boolean(this.#oldClient)) {
       target.classList.toggle("clicked");
     } else if (
