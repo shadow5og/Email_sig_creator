@@ -265,14 +265,10 @@ export default class UI {
 
       document.body.classList.toggle("no-scroll");
 
-<<<<<<< HEAD
-      emailClient.style.borderStyle = "none";
-=======
       emailClient.classList.toggle("clicked");
       this.#oldClient = null;
 
       document.querySelector("main .copy-button").classList.toggle("show");
->>>>>>> refactoring
     });
 
     // Make the disclaimer disappear after clicking x.
