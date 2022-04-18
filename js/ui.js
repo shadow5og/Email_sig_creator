@@ -198,52 +198,6 @@ export default class UI {
         <li>Click OK to confirm changes.</li>`;
         break;
     }
-<<<<<<< HEAD
-
-    list.innerHTML = instructions;
-    modals.classList.toggle("show");
-  };
-
-  // messing with the email boxes. I add toggle the border when it is clicked.
-  changeEmailClient = (e) => {
-    let btn = document.querySelector("main .copy-button .button");
-
-    if (this.#oldClient != null) {
-      this.#oldClient.classList.toggle("clicked");
-    }
-
-    let target = e.target;
-
-    while (!target.classList.contains("email-client")) {
-      target = target.parentElement;
-    }
-
-    target.classList.toggle("clicked");
-    this.#oldClient = target;
-
-    let emailApp = target.children[1].innerText;
-
-    if (!btn.parentElement.classList.contains("show")) {
-      btn.parentElement.classList.toggle("show");
-    }
-
-    btn.setAttribute("name", emailApp);
-
-    if (emailApp === "Exchange Server" || emailApp === "Thunderbird") {
-      btn.value = "Copy HTML";
-    } else {
-      btn.value = "Copy Signature";
-    }
-  };
-
-  //load all event listeners.
-  loadEvents(user) {
-    // Show the modal when the copy-button is clicked
-    document
-      .querySelector(".copy-button .button")
-      .addEventListener("click", this.showModal);
-
-=======
 
     list.innerHTML = instructions;
     modals.classList.toggle("show");
@@ -315,7 +269,6 @@ export default class UI {
       .querySelector(".copy-button .button")
       .addEventListener("click", this.showModal);
 
->>>>>>> refactoring
     // Hide the modal when the "I'm Done" button is clicked.
     document.querySelector(".modals .button").addEventListener("click", (e) => {
       const emailClient = this.#oldClient;
