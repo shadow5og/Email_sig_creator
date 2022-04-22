@@ -1,34 +1,28 @@
 export default class StorageManager {
-  #data = JSON.parse(localStorage.getItem("official"));
+  static data = JSON.parse(localStorage.getItem("official"));
 
   constructor(ui) {
-    this.#data !== null ? this.retrieve(ui, this.#data) : null;
+    this.data !== null ? this.retrieve(ui) : null;
   }
 
   static userData() {
-    return JSON.parse(localStorage.getItem("official"));
+    return this.data;
   }
 
-  retrieve(ui, info = this.userData) {
+  retrieve(ui, info = StorageManager.userData()) {
     const inputs = ui.fields;
-    let data, input;
-    const userData = {};
+    let input = 0;
 
     for (const key in info) {
-      data = {
+      ui.setField({
         name: key,
-        value: info[key],
-      };
+        value: info[key]
+      });
 
-      userData[key] = info[key];
-
-      ui.setField(data);
       // That entire form is just there for show at the moment.
-      input = inputs.filter((item) => item.name === key)[0];
+      input = inputs.find((item) => item.name === key);
       ui.saveToSig(input);
     }
-
-    return userData;
   }
 
   static store(user) {

@@ -10,6 +10,21 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+
+  /* Disables Dragging Elements */
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-user-drag: none;
+  -webkit-user-user-drag: none;
+  -ms-user-user-drag: none;
+
+  /* Makes the elements unselectable */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 div, header, nav, ul, li, footer {
