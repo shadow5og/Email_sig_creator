@@ -47,7 +47,7 @@ export default class UI {
   }
 
   setField(data) {
-    const field = this.#inputs.filter((input) => input.name === data.name)[0];
+    const field = this.#inputs.find((input) => input.name === data.name);
 
     field.value = data.value;
   }
@@ -252,6 +252,9 @@ export default class UI {
 
   //load all event listeners.
   loadEvents(user) {
+    // Disable right click.
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
     // Show the modal when the copy-button is clicked
     document
       .querySelector(".copy-button .button")

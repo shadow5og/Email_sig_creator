@@ -2,7 +2,7 @@ import StorageManager from "./storage.js";
 
 export default class Official {
   constructor(isEmpty) {
-    !isEmpty ? this.init(StorageManager.userData(), this) : null;
+    !isEmpty ? this.init(StorageManager.userData()) : null;
   }
 
   changeInfo(key, value) {
@@ -11,10 +11,8 @@ export default class Official {
     StorageManager.store(this);
   }
 
-  init(data, user) {
-    for (let key in data) {
-      user[key] = data[key];
-    }
+  init(data) {
+    Object.assign(this, data); // Literally copying data from local storage to the official object.
 
     console.log("User has been initialized.");
   }
