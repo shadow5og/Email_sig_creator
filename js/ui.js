@@ -21,14 +21,6 @@ export default class UI {
   #inputs = Array.from(document.querySelectorAll('input[type="text"]'));
 
   constructor(user) {
-    // I dynamically set the year of the copy write statement at the footer to the current year.
-    (function yearGet() {
-      let d = new Date();
-      let thisYear = d.getFullYear(),
-        element = document.querySelector("#copyrightYear");
-      element.innerText = thisYear;
-    })();
-
     // Reset the church logo animation every 10 seconds
     let logoShineInterval = setInterval(() => {
       this.#logoShine.classList.remove("shine-animation");
@@ -39,6 +31,14 @@ export default class UI {
     }, 10000);
 
     this.loadEvents(user);
+  }
+
+  // I dynamically set the year of the copy write statement at the footer to the current year.
+  yearGet() {
+    let d = new Date();
+    let thisYear = d.getFullYear(),
+      element = document.querySelector("#copyrightYear");
+    element.innerText = thisYear;
   }
 
   // Returns the input fields.
@@ -252,6 +252,9 @@ export default class UI {
 
   //load all event listeners.
   loadEvents(user) {
+    // I dynamically set the year of the copy write statement at the footer to the current year.
+    window.addEventListener("load", this.yearGet);
+
     // Disable right click.
     document.addEventListener('contextmenu', event => event.preventDefault());
 
@@ -284,10 +287,12 @@ export default class UI {
 
     // adding event listeners into the  input fields except the email field.
     for (let input of this.#inputs) {
-      input.addEventListener("keyup", (e) => {
-        let t = []; // Pair the setTimer ID and the input element being targeted using that array.
+      input.addEventListener("change", (e) => {
+        console.log(`Changing the ${e.target.name}.`);
 
-        // Reset the timer every time a key is pressed within the same input.
+        let t = []; // Pair the setTimer ID and the input element being targeted using that array.
+    
+        // Reset the timer every time an put value is changed.
         let index = 0;
         for (const typed of t) {
           if (e.target === typed[1]) {
