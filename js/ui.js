@@ -1,7 +1,6 @@
 // UI class
 export default class UI {
   //Private variables.
-
   //grabbing the form within the footer.
   #emailForm = document.querySelector("footer form");
   // grabbing the Rectangles with the different email clients
@@ -25,12 +24,12 @@ export default class UI {
     let logoShineInterval = setInterval(() => {
       this.#logoShine.classList.remove("shine-animation");
 
-      void this.#logoShine.offsetWidth;
+      this.#logoShine.offsetWidth;
 
       this.#logoShine.classList.add("shine-animation");
     }, 10000);
 
-    this.loadEvents(user);
+    this.initialize(user);
   }
 
   // I dynamically set the year of the copy write statement at the footer to the current year.
@@ -250,13 +249,31 @@ export default class UI {
     }
   };
 
+  // Latest Sabbath School Lesson
+  latestSSL() {
+    const date = new Date(),
+      year = date.getFullYear(),
+      month = date.getMonth(),
+      sslLink = document.querySelector("#sslLink");
+    let quarter = 1,
+      link;
+
+    if (month > 5) quarter = 2;
+    link = `https://imsgc.s3.us-west-2.amazonaws.com/ssl/SSL-${year}-${quarter}.pdf`;
+
+    sslLink.setAttribute("href", link);
+  }
+
   //load all event listeners.
-  loadEvents(user) {
+  initialize(user) {
     // I dynamically set the year of the copy write statement at the footer to the current year.
     window.addEventListener("load", this.yearGet);
 
+    // Provide link to the latest Sabbath School Lesson
+    this.latestSSL();
+
     // Disable right click.
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener("contextmenu", (event) => event.preventDefault());
 
     // Show the modal when the copy-button is clicked
     document
@@ -291,7 +308,7 @@ export default class UI {
         console.log(`Changing the ${e.target.name}.`);
 
         let t = []; // Pair the setTimer ID and the input element being targeted using that array.
-    
+
         // Reset the timer every time an put value is changed.
         let index = 0;
         for (const typed of t) {

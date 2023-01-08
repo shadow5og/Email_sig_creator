@@ -325,7 +325,6 @@
                     class="ng-scope logo-show"
                     width="108"
                     valign="top"
-                    align="center"
                   >
                     <div class="logo-shine shine-animation"></div>
                     <!-- ngIf: showField('logoURL') --><a
@@ -341,14 +340,13 @@
                         ng-src="https://imssdarm-sau.org.za/storage/app/media/LOGO-mini.png"
                         src="https://imssdarm-sau.org.za/storage/app/media/LOGO-mini.png"
                         width="88"
-                        border="0" /></a
                     ><!-- end ngIf: showField('logoURL') -->
                     <!-- ngIf: !showField('logoURL') -->
                   </td>
                   <!-- end ngIf: showField('logo') -->
                   <!-- ngIf: !showField('logo') -->
                   <td style="padding-left: 15px" valign="top">
-                    <table cellspacing="0" cellpadding="0" border="0">
+                    <table cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
                           <td
@@ -515,24 +513,25 @@
                   </td>
                 </tr>
                 <!-- ngIf: showField('banner') -->
-                <tr ng-if="showField('banner')" class="ng-scope">
+                <tr>
                   <td
                     colspan="2"
                     style="padding-top: 15px; border-top: 1px dotted #000"
                   >
-                    <!-- ngIf: showField('bannerURL') --><a
+                    <!-- ngIf: showField('bannerURL') -->
+                    <a
                       ng-if="showField('bannerURL')"
                       href="https://imsgc.s3.us-west-2.amazonaws.com/ssl/SSL-2022-1.pdf"
                       target="_blank"
                       rel="noopener"
                       class="ng-scope"
+                      id="sslLink"
                       ><img
-                        ng-src="https://imssdarm-sau.org.za/storage/app/media/READINGS1.png"
                         alt="Banner"
                         id="banner"
                         style="max-width: 528px; height: auto; border: 0"
                         src="https://imssdarm-sau.org.za/storage/app/media/READINGS1.png"
-                        border="0" /></a
+                        /></a
                     ><!-- end ngIf: showField('bannerURL') -->
                     <!-- ngIf: !showField('bannerURL') -->
                   </td>
